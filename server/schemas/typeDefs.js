@@ -4,7 +4,7 @@ const { gql } = require('apollo-server-express');
 
 /* Defining the schema for the GraphQL API. */
 const typeDefs = gql`
-  type Profile {
+  type User {
     _id: ID!
     name: String!
     email: String!
@@ -12,17 +12,17 @@ const typeDefs = gql`
   }
 
   type Query {
-    profiles: [Profile]!
-    profile(profileId: ID!): Profile
+    Users: [User]!
+    User(UserId: ID!): User
   }
 
   type Auth {
     token: ID!
-    profile: Profile
+    User: User
   }
   type Mutation {
-    addProfile(name: String!): Profile
-    removeProfile: Profile
+    addUser(name: String!): User
+    removeUser: User
   }
 `;
 
