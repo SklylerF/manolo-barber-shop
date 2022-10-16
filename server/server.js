@@ -1,5 +1,10 @@
+/* This is a common pattern for setting a port for an express server. */
 const PORT = process.env.PORT || 3001;
 
+/**
+ * It creates a new ApolloServer instance, configures it with our type definitions and resolvers, and
+ * then starts it
+ */
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
@@ -11,8 +16,11 @@ const startServer = async () => {
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
 
+/* It creates a new ApolloServer instance, configures it with our type definitions and resolvers, and
+then starts it. */
 startServer();
 
+/* Parsing the body of the request. */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
