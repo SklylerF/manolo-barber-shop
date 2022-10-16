@@ -1,3 +1,4 @@
+/* This is importing the jsonwebtoken package. */
 const jwt = require('jsonwebtoken');
 
 // set token secret and expiration date
@@ -15,6 +16,7 @@ module.exports = {
       token = token.split(' ').pop().trim();
     }
 
+    /* If there is no token, it returns the request. */
     if (!token) {
       return req
     }
@@ -27,12 +29,15 @@ module.exports = {
       console.log('Invalid token');
     }
 
-   return req
-   
+    /* Returning the request object. */
+    return req
+
   },
+  /* Creating a payload object with the username, email, and _id. */
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 
+    /* Creating a token with the payload, secret, and expiration date. */
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
