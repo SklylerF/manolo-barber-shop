@@ -1,7 +1,13 @@
+/* Importing the AuthenticationError from the apollo-server-express package. */
 const { AuthenticationError } = require("apollo-server-express");
+/* Importing the User model from the models folder. */
 const { User } = require("../models");
+/* Importing the signToken function from the auth.js file. */
 const { signToken } = require("../utils/auth");
 
+
+
+/* This is the resolver for the queries and mutations. */
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
@@ -37,7 +43,7 @@ const resolvers = {
 
       return { token, user };
     },
-}
+  }
 }
 
 module.exports = resolvers;
