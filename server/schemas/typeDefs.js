@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
   type Mutation {
     addProfile(name: String!): Profile
-    addSkill(profileId: ID!, skill: String!): Profile
+    removeProfile: Profile
   }
 `;
 
