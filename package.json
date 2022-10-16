@@ -1,5 +1,5 @@
 {
-  "name": "googlebooks-app",
+  "name": "project3",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -14,5 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.15.0",
+    "dotenv": "^16.0.3",
+    "graphql": "^15.8.0"
   }
 }
+
