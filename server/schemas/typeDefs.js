@@ -13,22 +13,17 @@ const typeDefs = gql`
   }
 
   type Appointment {
-    _id: ID!
+    id: ID!
     user: User!
+    appointmentTime: String!
   }
-
-  type AppointmentTime {
-  time: String!
-  appointments: [Appointment!]!
-}
 
 type Day {
   # The Day ID could be the actual day itself, i.e. 2020-12-29
   id: ID!
   open: Boolean!
   hours: Int!
-  appointmentTimes: AppointmentTime!
-}
+  appointments: [Appointment!]
 
 type Schedule {
  days: [Day!]!
@@ -45,7 +40,7 @@ type Schedule {
   }
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, name: String!,  email: String!, password: String!): Auth
   }
 `;
 
