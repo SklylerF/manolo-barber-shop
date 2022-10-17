@@ -14,8 +14,9 @@ const typeDefs = gql`
 
   type Appointment {
     _id: ID!
-    user: User!
     appointmentTimeDate: String!
+    approved: Boolean
+    user: User!
   }
 
 type Day {
@@ -24,14 +25,16 @@ type Day {
   open: Boolean!
   hours: Int!
   appointments: [Appointment!]!
-
-type Schedule {
- days: [Day!]!
 }
 
+#type Schedule {
+ #days: [Day!]!
+#}
+
   type Query {
-    Users: [User!]!
-    singleUser(UserId: ID!): User
+    getUsers: [User!]!
+    getsingleUser(UserId: ID!): User
+    getDaySchedule(Date: ID!): Day
   }
 
   type Auth {
@@ -41,6 +44,9 @@ type Schedule {
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, name: String!,  email: String!, password: String!): Auth
+    requestAppointment(appointmentTimeDate: String!, user: User!,): Appointment
+    approveAppointment: (id: ID!): Appointment
+    
   }
 `;
 

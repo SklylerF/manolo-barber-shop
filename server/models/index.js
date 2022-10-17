@@ -1,5 +1,6 @@
-/* Importing the User model from the User.js file. */
+/* Importing models  */
 const User = require('./User');
-
-/* Exporting the User model. */
-module.exports = { User };
+const Appointment = require('./Appointment');
+const DAY = require('./Day')
+/* Exporting models. */
+module.exports = { User , Appointment , DAY };

@@ -18,4 +18,4 @@ const daySchema = new Schema({
 
 const Day = model('Day', daySchema);
 
-module.exports = daySchema;
+module.exports = Day;

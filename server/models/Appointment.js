@@ -7,7 +7,11 @@ const appointmentSchema = new Schema({
         type: Date,
         required: true,
     },
-    user: userSchema,
+    approved: {
+        type: Boolean,
+        required: true,
+        default: true,
+    }
 })
 
 const Appointment = model('Appointment', appointmentSchema);
