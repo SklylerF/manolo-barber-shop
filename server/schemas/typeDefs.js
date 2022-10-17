@@ -13,24 +13,24 @@ const typeDefs = gql`
   }
 
   type Appointment {
-    id: ID!
+    _id: ID!
     user: User!
-    appointmentTime: String!
+    appointmentTimeDate: String!
   }
 
 type Day {
   # The Day ID could be the actual day itself, i.e. 2020-12-29
-  id: ID!
+  _id: ID!
   open: Boolean!
   hours: Int!
-  appointments: [Appointment!]
+  appointments: [Appointment!]!
 
 type Schedule {
  days: [Day!]!
 }
 
   type Query {
-    Users: [User]!
+    Users: [User!]!
     singleUser(UserId: ID!): User
   }
 
