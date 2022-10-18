@@ -6,6 +6,8 @@ const path = require('path');
 /* Importing the connection to the database. */
 const db = require('./config/connection');
 
+const { typeDefs, resolvers } = require('./schemas');
+
 /* Setting the port to the environment variable PORT or 3001 if the environment variable is not set. */
 const PORT = process.env.PORT || 3001;
 
