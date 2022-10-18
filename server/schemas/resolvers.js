@@ -10,7 +10,7 @@ const { signToken } = require("../utils/auth");
 /* This is the resolver for the queries and mutations. */
 const resolvers = {
   Query: {
-    me: async (parent, args, context) => {
+    singleUser: async (parent, args, context) => {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id }).select(
           "-__v -password"
