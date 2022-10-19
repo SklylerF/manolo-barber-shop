@@ -4,6 +4,13 @@
   left: 0;
 }
 
+svg {
+  height: 60px;
+  color: white;
+}
+path {
+  height: 60px;
+}
 header h2{
   font-size: 30px;
   font-weight: 700;
@@ -12,13 +19,13 @@ header h2{
 nav a{
   font-size: 20px;
   margin: 0 2rem;
-  color: black;
+  color: white;
   font-weight: 700;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: black; 
+  color: lightcoral; 
 }
 
 header .nav-btn {
@@ -30,6 +37,13 @@ header .nav-btn {
   color: black;
   display: none;
   opacity: 0;
+}
+
+.manolo-logo {
+  margin-left: 30px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -49,6 +63,7 @@ header .nav-btn {
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    transition: .5s;
     background-color: #d3d6db;
     transform: translateY(-100vh)
   }
@@ -68,3 +83,4 @@ header .nav-btn {
     font-size: 1.5rem;
   }
 }
+
