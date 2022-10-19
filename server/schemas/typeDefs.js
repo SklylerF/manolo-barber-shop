@@ -65,9 +65,9 @@ type Auth {
     getUsers: [User!]!
     singleUser(UserId: ID!): User
     getDaySchedule(Date: ID!): Day
+    categories: [Category]
     product(_id: ID!): Product
     products(category: ID, name: String): [Product]
-    categories: [Category]
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
 
