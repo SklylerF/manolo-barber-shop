@@ -10,7 +10,8 @@
 }
 
 .transparent-logo {
-  width: 1200px;
+  width: 950px;
+  height: 100%;
   display: block;
 }
 
@@ -43,7 +44,7 @@
 
 @media only screen and (max-width: 1023px) {
   .transparent-logo {
-      width: 100%;
+      width: auto;
       height: 600px;
       object-fit:cover;
   }
@@ -58,4 +59,14 @@
     height: 500px;
     object-fit: fill;
   }
+}
+
+@media only screen and (max-width: 640px) {
+    .transparent-logo {
+      width: 500px;
+      height: 100%;  
+    }
+    .book-button {
+      bottom: -10px;
+    }
 }
