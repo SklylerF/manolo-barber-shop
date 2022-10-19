@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import ManoloLogo from "../.././assets/images/manolo-logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./navbar.css";
@@ -11,10 +12,10 @@ const stylesHeader = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  height: "100px",
+  height: "auto",
   width: "100vw",
   padding: "0 2rem",
-  backgroundColor: "#d3d6db",
+  backgroundColor: "#303841",
   color: "black",
   top: 0,
   position: "sticky",
@@ -31,14 +32,14 @@ export default function Navbar() {
   return (
     <div className='navbar-container'>
       <header style={stylesHeader}>
-        <h2>Manolo Barber Shop</h2>
+        <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
         <nav ref={navRef}>
           <a href='#about-us'>About Us</a>
           <a href={bookAppointmentLink} target='_blank'>
             Book an Appointment
           </a>
           <a href=''>Shop</a>
-          <a href=''>Login</a>
+          <a href='/auth'>Login</a>
           <button className='nav-btn nav-close-btn' onClick={showNav}>
             <FaTimes />
           </button>
