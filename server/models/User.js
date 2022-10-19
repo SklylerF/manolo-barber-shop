@@ -2,6 +2,8 @@
 const { Schema, model } = require('mongoose');
 /* Importing the bcrypt library. */
 const bcrypt = require('bcrypt');
+const Order = require('./Order');
+
 
 /* Creating a schema for the user. */
 
@@ -21,7 +23,9 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 5,
-    }
+    },
+    orders: [Order.schema]
+    
 });
 
 // set up pre-save middleware to create password
