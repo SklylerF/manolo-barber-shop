@@ -2,18 +2,36 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 100000;
 }
 
+.header-container {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+  width: 100vw;
+  padding: 0, 2rem;
+  color: black;
+  top: 0;
+  position: sticky;
+  padding: 50px;
+  z-index: 10000;
+  box-shadow: 10px 5px 10px rgb(30, 29, 29);
+}
+
+
+
 svg {
-  height: 60px;
+  height: 65px;
   color: white;
 }
-path {
-  height: 60px;
-}
+
 header h2{
   font-size: 30px;
   font-weight: 700;
+  display: none;
 }
 
 nav a{
@@ -25,7 +43,7 @@ nav a{
 }
 
 nav a:hover {
-  color: lightcoral; 
+  color: #d3d6db; 
 }
 
 header .nav-btn {
@@ -40,37 +58,70 @@ header .nav-btn {
 }
 
 .manolo-logo {
-  margin-left: 30px;
-  width: 250px;
+  width: 300px;
   justify-content: center;
   align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
+.manolo-logo-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1051px) {
   header .nav-btn {
     display: inline-block;
     opacity: 1;
+  }
+
+  .manolo-logo {
+    display: none;
+  }
+
+  .header-container {
+    height: auto;
+    padding: 30px;
+  }
+
+  header h2 {
+    text-align: center;
+    display: inline-block;
+    color: white;
+
+  }
+
+  .manolo-logo-nav {
+    display: inline-block;
+    top: 0;
+    width: 250px;
+  }
+
+  .nav-text {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 20px;
   }
 
   header nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 50%;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
     transition: .5s;
-    background-color: #d3d6db;
+    background-color: #303841;
     transform: translateY(-100vh)
   }
 
   header .responsive-nav {
     transform: none;
     transition: .4s;
+    z-index: 10;
   }
 
   nav .nav-close-bottom {
@@ -84,3 +135,10 @@ header .nav-btn {
   }
 }
 
+
+@media only screen and (max-width: 430px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
