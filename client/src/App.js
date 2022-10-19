@@ -11,7 +11,7 @@ function App() {
       <LandingPage />
     </div>
       <Routes>
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/Auth" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   );
