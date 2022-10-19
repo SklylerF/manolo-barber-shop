@@ -34,7 +34,7 @@ export default function Navbar() {
       <header style={stylesHeader}>
         <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
         <nav ref={navRef}>
-          <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
+          <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
           <div className='nav-text'>
             <a href='#about-us'>About Us</a>
             {/* change this instead of using an anchor tag */}

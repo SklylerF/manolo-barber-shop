@@ -45,13 +45,18 @@ header .nav-btn {
   align-items: center;
 }
 
+.manolo-logo-nav {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px) {
   header .nav-btn {
     display: inline-block;
     opacity: 1;
   }
 
-  .manolo-logo {
+  .manolo-logo-nav {
+    display: inline-block;
     top: 0;
     width: 250px;
   }
