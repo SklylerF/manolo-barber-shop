@@ -15,7 +15,7 @@ const stylesHeader = {
   height: "auto",
   width: "100vw",
   padding: "0 2rem",
-  backgroundColor: "black",
+  backgroundColor: "#303841",
   color: "black",
   top: 0,
   position: "sticky",
