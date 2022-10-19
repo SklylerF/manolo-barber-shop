@@ -14,7 +14,14 @@ const daySchema = new Schema({
 
     },
     appointments: [appointmentSchema],
-});
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
+}
+);
+
 
 const Day = model('Day', daySchema);
 

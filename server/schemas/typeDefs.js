@@ -27,25 +27,29 @@ type Day {
   appointments: [Appointment!]!
 }
 
-#type Schedule {
- #days: [Day!]!
-#}
-
-  type Query {
-    getUsers: [User!]!
-    getsingleUser(UserId: ID!): User
-    getDaySchedule(Date: ID!): Day
-  }
-
-  type Auth {
+type Auth {
     token: ID!
     User: User
   }
+
+  input UserInput {
+    username: String
+    name: String
+    email: String
+  }
+
+
+  type Query {
+    getUsers: [User!]!
+    singleUser(UserId: ID!): User
+    getDaySchedule(Date: ID!): Day
+    }
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, name: String!,  email: String!, password: String!): Auth
-    requestAppointment(appointmentTimeDate: String!, user: User!,): Appointment
-    approveAppointment: (id: ID!): Appointment
+    requestAppointment(appointmentTimeDate: String!, input: UserInput!): Appointment
+    approveAppointment(id: ID!): Appointment
     
   }
 `;

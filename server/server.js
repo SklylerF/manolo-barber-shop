@@ -1,17 +1,14 @@
-/* Importing the express, apollo-server-express, and path modules. */
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
-/* Importing the connection to the database. */
 const db = require('./config/connection');
 
-const { typeDefs, resolvers } = require('./schemas');
-
-/* Setting the port to the environment variable PORT or 3001 if the environment variable is not set. */
-const PORT = process.env.PORT || 3001;
+const { ApolloServer } = require("apollo-server-express");
+const { typeDefs, resolvers } = require("./schemas");
+const { authMiddleware } = require("./utils/auth");
 
 const app = express();
+const PORT = process.env.PORT || 3001;
+
 
 /**
  * It creates a new ApolloServer instance, configures it with our type definitions and resolvers, and
