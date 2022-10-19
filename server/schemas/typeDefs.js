@@ -5,11 +5,11 @@ const { gql } = require('apollo-server-express');
 /* Defining the schema for the GraphQL API. */
 const typeDefs = gql`
   type User {
-    _id: ID!
-    username: String!
-    name: String!
-    email: String!
-    password: String!
+    _id: ID
+    username: String
+    name: String
+    email: String
+    password: String
   }
 
   type Appointment {
@@ -40,7 +40,7 @@ type Auth {
 
 
   type Query {
-    getUsers: [User!]!
+    getUsers: [User]
     singleUser(UserId: ID!): User
     getDaySchedule(Date: ID!): Day
     }
