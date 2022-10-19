@@ -25,7 +25,7 @@ nav a{
 }
 
 nav a:hover {
-  color: lightcoral; 
+  color: #d3d6db; 
 }
 
 header .nav-btn {
@@ -40,8 +40,7 @@ header .nav-btn {
 }
 
 .manolo-logo {
-  margin-left: 30px;
-  width: 250px;
+  width: 300px;
   justify-content: center;
   align-items: center;
 }
@@ -50,6 +49,19 @@ header .nav-btn {
   header .nav-btn {
     display: inline-block;
     opacity: 1;
+  }
+
+  .manolo-logo {
+    top: 0;
+    width: 250px;
+  }
+
+  .nav-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 20px;
   }
 
   header nav {
@@ -61,10 +73,10 @@ header .nav-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
     transition: .5s;
-    background-color: #d3d6db;
+    background-color: #303841;
     transform: translateY(-100vh)
   }
 
