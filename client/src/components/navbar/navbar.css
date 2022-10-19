@@ -2,18 +2,35 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 100000;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+  width: 100vw;
+  padding: 0, 2rem;
+  color: black;
+  top: 0;
+  position: sticky;
+  padding: 50px;
+  z-index: 10000;
+  box-shadow: 10px 5px 10px rgb(30, 29, 29);
+}
+
+
+
 svg {
-  height: 60px;
+  height: 65px;
   color: white;
 }
-path {
-  height: 60px;
-}
+
 header h2{
   font-size: 30px;
   font-weight: 700;
+  display: none;
 }
 
 nav a{
@@ -49,10 +66,26 @@ header .nav-btn {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1051px) {
   header .nav-btn {
     display: inline-block;
     opacity: 1;
+  }
+
+  .manolo-logo {
+    display: none;
+  }
+
+  .header-container {
+    height: 150px;
+    padding: 0px 50px 0px 50px;
+  
+  }
+
+  header h2 {
+    display: inline-block;
+    color: white;
+
   }
 
   .manolo-logo-nav {
@@ -88,6 +121,7 @@ header .nav-btn {
   header .responsive-nav {
     transform: none;
     transition: .4s;
+    z-index: 10;
   }
 
   nav .nav-close-bottom {
