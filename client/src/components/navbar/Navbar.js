@@ -31,7 +31,9 @@ export default function Navbar() {
               BOOK APPOINTMENT
             </a>
             <a href=''>SHOP</a>
-            <a href=''>LOGIN</a>
+            <Link to='/auth'>
+              <a href=''>LOGIN</a>
+            </Link>
             <button className='nav-btn nav-close-btn' onClick={showNav}>
               <FaTimes />
             </button>
