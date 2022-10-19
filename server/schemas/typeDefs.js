@@ -33,6 +33,12 @@ type Auth {
     User: User
   }
 
+  type Category {
+    _id: ID
+    name: String
+  }
+
+
   type Product {
     _id: ID
     name: String
