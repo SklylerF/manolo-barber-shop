@@ -1,41 +1,55 @@
 /* login in  */
-
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
 .App {
     background-color: white;
-  }
-  
-  .Auth-form-container {
+}
+#sign-up {
+    cursor: pointer
+}
+#btn {
+    background-color: #be3144;
+    color: #d3d6db;
+    border-color: #be3144
+}
+
+#btn:hover {
+    background-color: #a12838;
+}
+
+.Auth-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-  }
-  .Auth-form {
+}
+
+.Auth-form {
     width: 420px;
-    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
     padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 8px;
-    background-color: rgb(255, 252, 252);
-  }
-  
-  .Auth-form-content {
+}
+
+.Auth-form-content {
     padding-left: 12%;
     padding-right: 12%;
-  }
-  
-  .Auth-form-title {
+}
+
+.Auth-form-title {
     text-align: center;
     margin-bottom: 1em;
     font-size: 24px;
     color: rgb(34, 34, 34);
     font-weight: 800;
-  }
-  
-  label {
+}
+
+label {
     font-size: 14px;
     font-weight: 600;
     color: rgb(34, 34, 34);
-  }
-  
+}
