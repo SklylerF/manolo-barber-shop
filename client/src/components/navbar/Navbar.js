@@ -21,16 +21,6 @@ export default function Navbar() {
     <div className='navbar-container'>
       <header className='header-container'>
         <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
-        <nav className='nav' ref={navRef} />
-        <a href='#about-us'>About Us</a>
-        <a href={bookAppointmentLink} target='_blank'>
-          Book an Appointment
-        </a>
-        <a href=''>Shop</a>
-        <a href='/auth'>Login</a>
-        <button className='nav-btn nav-close-btn' onClick={showNav}>
-          <FaTimes />
-        </button>
         <h2>MANOLO BARBERSHOP</h2>
         <nav ref={navRef}>
           <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
