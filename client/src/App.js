@@ -10,7 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        <LandingPage />
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/auth' element={<Auth />} />
+        </Routes>
       </div>
       <section>
         <div>
