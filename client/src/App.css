@@ -1,15 +1,19 @@
-/* login in  */
+
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
+    background-color: #3a4750;
 }
+/* login in  */
 .App {
     background-color: white;
 }
+
 #sign-up {
     cursor: pointer
 }
+
 #btn {
     background-color: #be3144;
     color: #d3d6db;
@@ -52,4 +56,11 @@ label {
     font-size: 14px;
     font-weight: 600;
     color: rgb(34, 34, 34);
+}
+/* 'Gallery' from carousel  */
+#gallery {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #be3144;
+    color: #d3d6db;
 }

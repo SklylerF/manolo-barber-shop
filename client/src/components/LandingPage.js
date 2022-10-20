@@ -18,7 +18,7 @@ export default function LandingPage() {
       <div style={styles}>
         <Navbar />
         <div className='landing-image-container'>{/* <img style={imageStyle} src={manoloBackground}></img> */}</div>
-      </div>
+    </div>
     </div>
   );
 }
