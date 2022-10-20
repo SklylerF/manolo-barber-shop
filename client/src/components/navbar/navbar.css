@@ -34,7 +34,7 @@ header .nav-btn {
   background: transparent;
   border: none;
   outline: none;
-  color: black;
+  color: rgb(211, 214, 219);
   display: none;
   opacity: 0;
 }
