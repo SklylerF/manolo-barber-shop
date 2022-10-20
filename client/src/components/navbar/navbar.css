@@ -18,7 +18,7 @@
   position: sticky;
   padding: 50px;
   z-index: 10000;
-  box-shadow: 10px 5px 10px rgb(30, 29, 29);
+  box-shadow: 10px 10px 30px black
 }
 
 
@@ -26,16 +26,17 @@
 svg {
   height: 65px;
   color: white;
-  background-color: #303841;
+  background-color: transparent;
 }
 
 header h2{
   font-size: 30px;
   font-weight: 700;
   display: none;
+  background-color: transparent;
 }
 nav {
-  background-color: #303841;
+  background-color: transparent;;
 }
 nav a{
   font-size: 20px;
@@ -43,7 +44,7 @@ nav a{
   color: white;
   font-weight: 700;
   text-decoration: none;
-  background-color: #303841;
+  background-color: transparent;
 }
 
 nav a:hover {
@@ -65,11 +66,15 @@ header .nav-btn {
   width: 300px;
   justify-content: center;
   align-items: center;
-  background-color: #303841;
+  background-color: transparent;
 }
 
 .manolo-logo-nav {
   display: none;
+}
+
+.nav-text {
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 1051px) {
@@ -98,9 +103,11 @@ header .nav-btn {
     display: inline-block;
     top: 0;
     width: 250px;
+    background-color: transparent;
   }
 
   .nav-text {
+    display: flex;
     flex-direction: column;
     text-align: center;
     gap: 40px;
