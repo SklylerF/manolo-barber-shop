@@ -33,7 +33,7 @@ export default function Navbar() {
     <div className='navbar-container'>
       <header style={stylesHeader}>
         <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
-        <nav ref={navRef}>
+        <nav className="nav" ref={navRef}>
           <a href='#about-us'>About Us</a>
           <a href={bookAppointmentLink} target='_blank'>
             Book an Appointment
