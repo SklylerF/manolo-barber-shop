@@ -14,7 +14,7 @@ const styles = {
 export default function LandingPage() {
   return (
     <div>
-      <div style={styles}>
+      <div className='first'>
         <Navbar />
       </div>
       <div className='landing-image-container'>
