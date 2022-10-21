@@ -1,0 +1,41 @@
+.our-team-container {
+  background-color: #d3d6db;
+  padding: 75px 20px 75px 20px;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+
+.our-team-container h2 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+
+.team-flex-container {
+  padding: 20px 100px 20px 100px;
+  display: flex;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.team {
+  margin: 20px 20px 20px 20px;
+}
+
+.team-flex-container img {
+  height: 100%;
+  width: 100%;
+  border: black solid 1px;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 5px 10px 10px 5px grey;
+}
