@@ -1,0 +1,74 @@
+.first-slide-container {
+  background-color: transparent;
+  z-index: 100;
+  position: absolute;;
+  top: 15%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transparent-logo {
+  width: 950px;
+  height: 100%;
+  display: block;
+  background-color: black;
+}
+
+.book-button {
+  background-color: #ab0f14;
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: black 2px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.book-button:hover {
+  color: #d3d6d3;
+  background-color: #ab0f14;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+
+@media only screen and (max-width: 1023px) {
+  .transparent-logo {
+      width: auto;
+      height: 600px;
+      object-fit:cover;
+  }
+
+  .book-button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .transparent-logo {
+    height: 500px;
+    object-fit: fill;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+    .transparent-logo {
+      width: 500px;
+      height: 100%;  
+    }
+    .book-button {
+      bottom: -10px;
+    }
+}

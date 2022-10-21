@@ -1,15 +1,12 @@
-import manoloBackground from "../assets/images/manolo-background.jpg";
 import Navbar from "./navbar/Navbar";
+import FirstSlide from "./first-slide/FirstSlide";
+import ImageSlider from "./carousel/ImageSlider";
+import { SliderData } from "./carousel/SliderData.js";
 
 const styles = {
+  backgroundColor: "black",
   height: "100vh",
-  width: "100vh",
-};
-
-const imageStyle = {
-  position: "absolute",
-  width: "100%",
-  height: "93%",
+  width: "100vw",
 };
 
 export default function LandingPage() {
@@ -17,8 +14,16 @@ export default function LandingPage() {
     <div>
       <div style={styles}>
         <Navbar />
-        <div className='landing-image-container'>{/* <img style={imageStyle} src={manoloBackground}></img> */}</div>
-    </div>
+        <div className='landing-image-container'></div>
+      </div>
+      <div className='landing-image-container'>
+        <FirstSlide />
+      </div>
+      <section>
+        <div>
+          <ImageSlider slides={SliderData} />;
+        </div>
+      </section>
     </div>
   );
 }

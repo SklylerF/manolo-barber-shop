@@ -8,18 +8,6 @@ import "./navbar.css";
 const bookAppointmentLink = "https://booksy.com/en-us/739943_manolo-barbershop_barber-shop_134628_riverside";
 
 //only styles fot the header
-const stylesHeader = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  height: "auto",
-  width: "100vw",
-  padding: "0 2rem",
-  backgroundColor: "#303841",
-  color: "black",
-  top: 0,
-  position: "sticky",
-};
 
 export default function Navbar() {
   //used to toggle on and off of the navigation bar depending on the size of the screen
@@ -31,18 +19,25 @@ export default function Navbar() {
 
   return (
     <div className='navbar-container'>
-      <header style={stylesHeader}>
+      <header className='header-container'>
         <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
-        <nav className="nav" ref={navRef}>
-          <a href='#about-us'>About Us</a>
-          <a href={bookAppointmentLink} target='_blank'>
-            Book an Appointment
-          </a>
-          <a href=''>Shop</a>
-          <a href='/auth'>Login</a>
-          <button className='nav-btn nav-close-btn' onClick={showNav}>
-            <FaTimes />
-          </button>
+        <h2>MANOLO BARBERSHOP</h2>
+        <nav ref={navRef}>
+          <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
+          <div className='nav-text'>
+            <a href='#about-us'>ABOUT US</a>
+            {/* change this instead of using an anchor tag */}
+            <a href={bookAppointmentLink} target='_blank'>
+              BOOK APPOINTMENT
+            </a>
+            <a href=''>SHOP</a>
+            <Link to='/auth'>
+              <a href=''>LOGIN</a>
+            </Link>
+            <button className='nav-btn nav-close-btn' onClick={showNav}>
+              <FaTimes />
+            </button>
+          </div>
         </nav>
         <button className='nav-btn' onClick={showNav}>
           <FaBars />

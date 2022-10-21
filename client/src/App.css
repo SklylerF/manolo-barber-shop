@@ -56,6 +56,7 @@ label {
     font-size: 14px;
     font-weight: 600;
     color: rgb(34, 34, 34);
+
 }
 /* 'Gallery' from carousel  */
 #gallery {
@@ -64,3 +65,11 @@ label {
     text-decoration-color: #be3144;
     color: #d3d6db;
 }
+
+  
+
+ *  {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
