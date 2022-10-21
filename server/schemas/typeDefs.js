@@ -68,7 +68,6 @@ type Auth {
 
 
   type Query {
-    getUsers: [User!]!
     singleUser(UserId: ID!): User
     getDaySchedule(Date: ID!): Day
     categories: [Category]

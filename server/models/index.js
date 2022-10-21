@@ -6,4 +6,4 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Order = require('./Order');
 /* Exporting models. */
-module.exports = { User , Appointment , DAY };
+module.exports = { User , Appointment , DAY , Product, Category, Order};
