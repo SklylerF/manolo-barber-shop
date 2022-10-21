@@ -1,6 +1,7 @@
 import Navbar from "./navbar/Navbar";
 import FirstSlide from "./first-slide/FirstSlide";
 import ImageSlider from "./carousel/ImageSlider";
+import AboutUs from "./AboutUs/AboutUs";
 import { SliderData } from "./carousel/SliderData.js";
 
 const styles = {
@@ -14,11 +15,13 @@ export default function LandingPage() {
     <div>
       <div style={styles}>
         <Navbar />
-        <div className='landing-image-container'></div>
       </div>
       <div className='landing-image-container'>
         <FirstSlide />
       </div>
+      <section>
+        <AboutUs />
+      </section>
       <section>
         <div>
           <ImageSlider slides={SliderData} />;
