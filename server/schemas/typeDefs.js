@@ -1,6 +1,5 @@
 /* Importing the GraphQL schema language. */
-const { gql } = require('apollo-server-express');
-
+const { gql } = require("apollo-server-express");
 
 /* Defining the schema for the GraphQL API. */
 const typeDefs = gql`
@@ -20,15 +19,15 @@ const typeDefs = gql`
     user: User!
   }
 
-type Day {
-  # The Day ID could be the actual day itself, i.e. 2020-12-29
-  _id: ID!
-  open: Boolean!
-  hours: Int!
-  appointments: [Appointment!]!
-}
+  type Day {
+    # The Day ID could be the actual day itself, i.e. 2020-12-29
+    _id: ID!
+    open: Boolean!
+    hours: Int!
+    appointments: [Appointment!]!
+  }
 
-type Auth {
+  type Auth {
     token: ID!
     User: User
   }
@@ -38,7 +37,6 @@ type Auth {
     name: String
   }
 
-
   type Product {
     _id: ID
     name: String
@@ -47,7 +45,6 @@ type Auth {
     quantity: Int
     price: Float
     category: Category
-
   }
 
   type Order {
@@ -66,7 +63,6 @@ type Auth {
     email: String
   }
 
-
   type Query {
     getUsers: [User!]!
     singleUser(username: String!): User
@@ -76,19 +72,16 @@ type Auth {
     products(category: ID, name: String): [Product]
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
-
-    }
+  }
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, name: String!,  email: String!, password: String!): Auth
+    addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     requestAppointment(appointmentTimeDate: String!, input: UserInput!): Appointment
     approveAppointment(id: ID!): Appointment
     addOrder(products: [ID]!): Order
     updateProduct(_id: ID!, quantity: Int!): Product
-
-    
   }
 `;
 

@@ -2,6 +2,7 @@ import Navbar from "./navbar/Navbar";
 import FirstSlide from "./first-slide/FirstSlide";
 import ImageSlider from "./carousel/ImageSlider";
 import AboutUs from "./AboutUs/AboutUs";
+import OurTeam from "./OurTeam/OurTeam";
 import { SliderData } from "./carousel/SliderData.js";
 
 const styles = {
@@ -21,6 +22,9 @@ export default function LandingPage() {
       </div>
       <section>
         <AboutUs />
+      </section>
+      <section>
+        <OurTeam />
       </section>
       <section>
         <div>
