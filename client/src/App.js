@@ -14,12 +14,6 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           <Route path='/auth' element={<Auth />} />
         </Routes>
-        <section>
-          <div>
-            <h2 id='gallery'> Gallery </h2>
-            <ImageSlider slides={SliderData} />;
-          </div>
-        </section>
       </div>
     </BrowserRouter>
   );
