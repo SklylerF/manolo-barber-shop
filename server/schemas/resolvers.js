@@ -30,13 +30,16 @@ const resolvers = {
       return await Product.findById(_id).populate("category");
     },
     singleUser: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select(
-          "-__v -password"
-        );
-        return userData;
-      }
-      throw new AuthenticationError("Not logged in");
+      return User.findOne({
+        email: args.email
+      });
+      // if (context.user) {
+      //   const userData = await User.findOne({ _id: context.user._id }).select(
+      //     "-__v -password"
+      //   );
+      //   return userData;
+      // }
+      // throw new AuthenticationError("Not logged in");
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
