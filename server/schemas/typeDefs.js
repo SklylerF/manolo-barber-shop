@@ -69,7 +69,7 @@ type Auth {
 
   type Query {
     getUsers: [User!]!
-    singleUser(email: String!): User
+    singleUser(username: String!): User
     getDaySchedule(Date: ID!): Day
     categories: [Category]
     product(_id: ID!): Product
