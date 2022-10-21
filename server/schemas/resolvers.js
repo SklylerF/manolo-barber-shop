@@ -31,15 +31,8 @@ const resolvers = {
     },
     singleUser: async (parent, args, context) => {
       return User.findOne({
-        email: args.email
+        username: args.username
       });
-      // if (context.user) {
-      //   const userData = await User.findOne({ _id: context.user._id }).select(
-      //     "-__v -password"
-      //   );
-      //   return userData;
-      // }
-      // throw new AuthenticationError("Not logged in");
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
