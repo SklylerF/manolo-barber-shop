@@ -2,6 +2,7 @@ import Navbar from "./navbar/Navbar";
 import FirstSlide from "./first-slide/FirstSlide";
 import ImageSlider from "./carousel/ImageSlider";
 import { SliderData } from "./carousel/SliderData.js";
+import Contacts from "./Contacts/Contact"
 
 const styles = {
   backgroundColor: "black",
@@ -24,6 +25,11 @@ export default function LandingPage() {
           <ImageSlider slides={SliderData} />;
         </div>
       </section>
+      <section>
+     <div>
+        <Contacts />
+     </div>
+     </section>
     </div>
   );
 }
