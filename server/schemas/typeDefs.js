@@ -12,21 +12,6 @@ const typeDefs = gql`
     orders: [Order]
   }
 
-  type Appointment {
-    _id: ID!
-    appointmentTimeDate: String!
-    approved: Boolean
-    user: User!
-  }
-
-  type Day {
-    # The Day ID could be the actual day itself, i.e. 2020-12-29
-    _id: ID!
-    open: Boolean!
-    hours: Int!
-    appointments: [Appointment!]!
-  }
-
   type Auth {
     token: ID!
     user: User
