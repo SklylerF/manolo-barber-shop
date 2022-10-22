@@ -12,21 +12,6 @@ const typeDefs = gql`
     orders: [Order]
   }
 
-  type Appointment {
-    _id: ID!
-    appointmentTimeDate: String!
-    approved: Boolean
-    user: User!
-  }
-
-  type Day {
-    # The Day ID could be the actual day itself, i.e. 2020-12-29
-    _id: ID!
-    open: Boolean!
-    hours: Int!
-    appointments: [Appointment!]!
-  }
-
   type Auth {
     token: ID!
     user: User
@@ -57,6 +42,11 @@ const typeDefs = gql`
     session: ID
   }
 
+  input CategoryInput {
+    _id: ID
+    name: String
+  }
+
   input UserInput {
     username: String
     name: String
@@ -66,7 +56,6 @@ const typeDefs = gql`
   type Query {
     getUsers: [User]
     singleUser(username: String!): User
-    getDaySchedule(Date: ID!): Day
     categories: [Category]
     product(_id: ID!): Product
     products(category: ID, name: String): [Product]
@@ -78,9 +67,8 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    requestAppointment(appointmentTimeDate: String!, input: UserInput!): Appointment
-    approveAppointment(id: ID!): Appointment
     addOrder(products: [ID]!): Order
+    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, Category: CategoryInput ): Product
     updateProduct(_id: ID!, quantity: Int!): Product
   }
 `;
