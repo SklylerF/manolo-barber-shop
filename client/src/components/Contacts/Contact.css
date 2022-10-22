@@ -1,26 +1,25 @@
-.Contact-us {
+.Contact-us,
+.address {
     text-align: center;
     text-decoration: underline;
     text-decoration-color: #be3144;
     color: #d3d6db;
-    font-size: 30px;
+    font-size: 37px;
+    padding: 0px 0px 30px;
 }
-
+.hourNtell {
+    display: flex;
+    justify-content: space-evenly;
+}
 .hours,
-.Call,
-.address {
+.Call {
     color: #d3d6db;
     text-align: center;
     font-size: 25px;
 }
-
-.time {
-    list-style: none;
-    text-align: center;
-}
-
 .Tel h3,
-.direction {
+.direction,
+.time {
     text-align: center;
     color: #d3d6db;
     font-size: 20px;
