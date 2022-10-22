@@ -3,4 +3,30 @@
     text-decoration: underline;
     text-decoration-color: #be3144;
     color: #d3d6db;
+    font-size: 30px;
+}
+
+.hours,
+.Call,
+.address {
+    color: #d3d6db;
+    text-align: center;
+    font-size: 25px;
+}
+
+.time {
+    list-style: none;
+    text-align: center;
+}
+
+.Tel h3,
+.direction {
+    text-align: center;
+    color: #d3d6db;
+    font-size: 20px;
+}
+iframe {
+    padding: 30px;
+    display: block;
+    margin: 0 auto;
 }
