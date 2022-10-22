@@ -19,7 +19,7 @@ const typeDefs = gql`
 
   type Category {
     _id: ID
-    name: String
+    name: String!
   }
 
   type Product {
@@ -68,8 +68,9 @@ const typeDefs = gql`
     addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     addOrder(products: [ID]!): Order
-    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, Category: CategoryInput ): Product
+    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, category: CategoryInput ): Product
     updateProduct(_id: ID!, quantity: Int!): Product
+    addCategory(name: String!): Category
   }
 `;
 

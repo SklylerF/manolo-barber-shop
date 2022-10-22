@@ -139,7 +139,11 @@ const resolvers = {
     },
     addProduct: async (parent, args) => {
       const product = await Product.create(args)
-      return product
+      return { product }
+    },
+    addCategory: async (parent,args) => {
+      const category = await Category.create(args)
+      return category
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
