@@ -47,12 +47,6 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a>EMAIL US</a>
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              {/* TODO: REMEMBER TO ENTER EMAIL HERE */}
-              <a className='email'>testemail@test.com</a>
-            </div>
-            <div>
               <a target='__blank' className='book-appointment' href='https://booksy.com/en-us/739943_manolo-barbershop_barber-shop_134628_riverside'>
                 BOOK AN APPOINTMENT
               </a>

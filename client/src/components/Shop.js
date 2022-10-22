@@ -1,7 +1,7 @@
+import { useState } from "react";
 import "./shop.css";
 import Navbar from "./navbar/Navbar";
 import Footer from "./Footer/Footer";
-import TemplateImg from "../assets/images/template-item-image.png";
 
 export default function Shop({ shopItems }) {
   return (
@@ -16,7 +16,7 @@ export default function Shop({ shopItems }) {
             {shopItems.map((item) => (
               <div className='item'>
                 <h2>{item.name}</h2>
-                <img src={TemplateImg} />
+                <img src={item.image} />
                 <div className='button-container'>
                   <button className='add-to-cart'> ADD TO CART FOR {item.price}</button>
                 </div>
