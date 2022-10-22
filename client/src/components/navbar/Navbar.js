@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import ManoloLogo from "../.././assets/images/manolo-logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ export default function Navbar() {
           <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
           <div className='nav-text'>
             {/* change this instead of using an anchor tag */}
-            <a href={bookAppointmentLink} target='_blank'>
+            <a href={bookAppointmentLink} target='__blank'>
               BOOK APPOINTMENT
             </a>
             <Link to='/shop'>SHOP</Link>

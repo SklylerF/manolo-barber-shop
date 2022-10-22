@@ -42,6 +42,11 @@ const typeDefs = gql`
     session: ID
   }
 
+  input CategoryInput {
+    _id: ID
+    name: String
+  }
+
   input UserInput {
     username: String
     name: String
@@ -63,6 +68,7 @@ const typeDefs = gql`
     addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     addOrder(products: [ID]!): Order
+    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, Category: CategoryInput ): Product
     updateProduct(_id: ID!, quantity: Int!): Product
   }
 `;
