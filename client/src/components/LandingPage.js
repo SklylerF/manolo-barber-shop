@@ -3,18 +3,19 @@ import FirstSlide from "./first-slide/FirstSlide";
 import ImageSlider from "./carousel/ImageSlider";
 import AboutUs from "./AboutUs/AboutUs";
 import OurTeam from "./OurTeam/OurTeam";
+import Footer from "./Footer/Footer";
+import "../App.css";
 import { SliderData } from "./carousel/SliderData.js";
 
 const styles = {
+  zIndex: 10000,
   backgroundColor: "black",
-  height: "100vh",
-  width: "100vw",
 };
 
 export default function LandingPage() {
   return (
     <div>
-      <div style={styles}>
+      <div className='first'>
         <Navbar />
       </div>
       <div className='landing-image-container'>
@@ -26,11 +27,10 @@ export default function LandingPage() {
       <section>
         <OurTeam />
       </section>
-      <section>
-        <div>
-          <ImageSlider slides={SliderData} />;
-        </div>
-      </section>
+      <ImageSlider slides={SliderData} />;
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

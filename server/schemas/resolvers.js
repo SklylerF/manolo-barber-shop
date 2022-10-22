@@ -8,9 +8,11 @@ const { signToken } = require("../utils/auth");
 /* This is the resolver for the queries and mutations. */
 const resolvers = {
   Query: {
+    /* This is a query that is used to find all categories. */
     categories: async () => {
       return await Category.find();
     },
+    /* This is a query that is used to find all products. */
     products: async (parent, { category, name }) => {
       const params = {};
 
@@ -26,21 +28,23 @@ const resolvers = {
 
       return await Product.find(params).populate("category");
     },
+    /* This is a query that is used to find a single product by its id. */
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
+    /* This is a query that is used to find all users. */
+    getUsers: async (perent, args, context) => {
+      return User.find({
+
+      })
+    },
+    /* This is a query that is used to find a single user by their username. */
     singleUser: async (parent, args, context) => {
       return User.findOne({
-        email: args.email
+        username: args.username
       });
-      // if (context.user) {
-      //   const userData = await User.findOne({ _id: context.user._id }).select(
-      //     "-__v -password"
-      //   );
-      //   return userData;
-      // }
-      // throw new AuthenticationError("Not logged in");
     },
+    /* This is a query that is used to find a single order by its id. */
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -53,6 +57,7 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    /* This is the checkout mutation. It is used to create a checkout session. */
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
@@ -92,6 +97,7 @@ const resolvers = {
   },
 
   Mutation: {
+    /* This is the login mutation. It is used to log a user in. */
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
@@ -107,12 +113,14 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    /* This is the addUser mutation. It is used to create a new user. */
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
 
       return { token, user };
     },
+    /* This is the addOrder mutation. It is used to create a new order. */
     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {

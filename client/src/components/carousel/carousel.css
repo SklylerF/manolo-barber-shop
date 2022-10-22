@@ -1,7 +1,13 @@
 /* Carousel */
+.slider-container {
+    height: 75vh;
+    width: 100%;
+    background-color: #3a4750;
+}
+
 .slider {
     position: relative;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +17,6 @@
 #image {
     width: 500px;
     justify-content:center;
-    margin: 0 auto;
 }
 
 .right-arrow {
