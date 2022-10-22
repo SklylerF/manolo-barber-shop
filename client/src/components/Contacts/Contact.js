@@ -8,7 +8,7 @@ function Contacts() {
                 <h1 className='Contact-us'>Contact Us</h1>
             </div>
             <div>
-                <p> Business Hours</p>
+                <h2> Business Hours</h2>
                 <ol>
                     <li>Mon:	9:00 AM – 7:00 PM</li>
                     <li>Tue:	Closed</li>
@@ -20,7 +20,14 @@ function Contacts() {
                 </ol>
             </div>
             <div>
-                <button type="button" onclick="alert('Hello world!')">Call Us</button>
+                <h2>Address</h2>
+                <h3>2308 University Avenue #102
+                    Riverside, CA 92507
+                    USA</h3>
+            </div>
+            <div>
+<h2>Call Us</h2>
+<h3>(951) 405-8881</h3>
             </div>
         </section>
     );
