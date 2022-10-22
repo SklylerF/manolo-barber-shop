@@ -1,9 +1,11 @@
 /* Importing the AuthenticationError from the apollo-server-express package. */
 const { AuthenticationError } = require("apollo-server-express");
 /* Importing the User model from the models folder. */
-const { User } = require("../models");
+const { User , Appointment , Category , Day , Order, Product} = require("../models");
 /* Importing the signToken function from the auth.js file. */
 const { signToken } = require("../utils/auth");
+const stripe = require('stripe')('sk_test_51LvW3REWiFhsoBBB3p2g8EczVo68lxoEJpM74GvF3bZphfwvDvbVIMlX9c337622l3WBUhVaCLZNXcDhxwzAnfrG00B8NDBqNq');
+
 
 /* This is the resolver for the queries and mutations. */
 const resolvers = {
