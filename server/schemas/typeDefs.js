@@ -66,7 +66,6 @@ const typeDefs = gql`
   type Query {
     getUsers: [User]
     singleUser(username: String!): User
-    getDaySchedule(Date: ID!): Day
     categories: [Category]
     product(_id: ID!): Product
     products(category: ID, name: String): [Product]
@@ -78,8 +77,6 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    requestAppointment(appointmentTimeDate: String!, input: UserInput!): Appointment
-    approveAppointment(id: ID!): Appointment
     addOrder(products: [ID]!): Order
     updateProduct(_id: ID!, quantity: Int!): Product
   }
