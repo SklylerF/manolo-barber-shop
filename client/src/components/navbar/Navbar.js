@@ -25,12 +25,11 @@ export default function Navbar() {
         <nav ref={navRef}>
           <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
           <div className='nav-text'>
-            <a href='#about-us'>ABOUT US</a>
             {/* change this instead of using an anchor tag */}
             <a href={bookAppointmentLink} target='_blank'>
               BOOK APPOINTMENT
             </a>
-            <a href=''>SHOP</a>
+            <Link to='/shop'>SHOP</Link>
             <Link to='/auth'>
               <a href=''>LOGIN</a>
             </Link>

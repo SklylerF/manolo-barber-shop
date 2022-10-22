@@ -31,11 +31,62 @@ p {
   margin: 20px 20px 20px 20px;
 }
 
+.book-with-btn-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-with {
+  text-decoration: none;
+  padding: 10px 40px 10px 40px;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px; 
+  transition: .3s;
+}
+
+.book-with:hover {
+  background-color: #ab0f14;
+  color: black;
+  cursor: pointer;
+}
+
 .team-flex-container img {
-  height: 100%;
+  height: auto;
+  max-width: 500px;
   width: 100%;
-  border: black solid 1px;
   border-radius: 10px;
   object-fit: contain;
   box-shadow: 5px 10px 10px 5px grey;
+}
+
+@media only screen and (max-width: 1990px) {
+  .team-flex-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .team-flex-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 684px){
+  .book-with {
+    padding: 5px 20px 5px 20px;
+  }
+  .team-flex-container {
+    padding: 0;
+  }
+  .our-team-container {
+    padding: 40px 0 40px 0px;
+  }
 }
