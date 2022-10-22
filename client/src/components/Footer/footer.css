@@ -1,0 +1,85 @@
+.footer-container {
+  height: auto;
+  padding: 100px;
+  background-color: black;
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #d3d6d3;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.footer-container a {
+  text-align: center;
+  margin: 7px;
+  cursor: pointer;
+}
+
+.phone, .email, .find-us , .review{
+  transition: .3s;
+  cursor: pointer;
+  color: white;
+  display: block;
+}
+
+.review, .book-appointment, .find-us, .services {
+  transition: .3s;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.book-appointment:hover {
+  color: #ab0f14;
+}
+
+.phone:hover, .email:hover, .find-us:hover, .review:hover, .book-appointment:hover, .about-us:hover, .services:hover {
+  color: #ab0f14;
+}
+
+.footer-right-left, .footer-right-right {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-right-left {
+  gap: 1rem;
+}
+
+.footer-right-right a{
+  cursor: default;
+}
+
+@media only screen and (max-width: 1289px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .footer-container {
+    padding: 50px;
+  }
+
+  .footer-right {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-right-left {
+    margin-top: 30px;
+  }
+}
