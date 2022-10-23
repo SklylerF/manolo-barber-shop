@@ -8,27 +8,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "./components/Auth";
 
 function App() {
-  const shopItems = [
-    {
-      name: "Item 1",
-      category: "Hair",
-      price: 13.99,
-      image: ProductOne,
-    },
-    {
-      name: "Item 2",
-      category: "Hair",
-      price: 13.99,
-      image: ProductTwo,
-    },
-  ];
   return (
     <BrowserRouter>
       <div className='App'>
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/auth' element={<Auth />} />
-          <Route path='/shop' element={<Shop shopItems={shopItems} />} />
+          <Route path='/shop' element={<Shop />} />
         </Routes>
       </div>
     </BrowserRouter>
