@@ -11,11 +11,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3a4750;
+    background-color: black;
   }
 
 #image {
-    width: 500px;
+    height: 350px;
     justify-content:center;
 }
 
@@ -24,7 +24,7 @@
     top: 50%;
     right: 32px;
     font-size: 3rem;
-    background-color: #3a4750;
+    background-color: transparent;
     z-index: 10;
     cursor: pointer;
     user-select: none;
@@ -35,7 +35,7 @@
     top: 50%;
     left: 32px;
     font-size: 3rem;
-    background-color: #3a4750;
+    background-color: transparent;
     z-index: 10;
     cursor: pointer;
     user-select: none;
