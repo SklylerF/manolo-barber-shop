@@ -20,8 +20,10 @@ export default function Navbar() {
   return (
     <div className='navbar-container'>
       <header className='header-container'>
-        <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
-        <h2>MANOLO BARBERSHOP</h2>
+        <Link to='/'>
+          <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
+          <h2>MANOLO BARBERSHOP</h2>
+        </Link>
         <nav ref={navRef}>
           <img className='manolo-logo-nav' src={ManoloLogo} alt='Manolo Logo' />
           <div className='nav-text'>
