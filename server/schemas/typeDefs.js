@@ -19,7 +19,7 @@ const typeDefs = gql`
 
   type Category {
     _id: ID
-    name: String!
+    name: String
   }
 
   type Product {
@@ -54,23 +54,31 @@ const typeDefs = gql`
   }
 
   type Query {
+    # works
     getUsers: [User]
+    # works
     singleUser(username: String!): User
+    # needs to be "seeded"
     categories: [Category]
+    # needs to be "seeded"
     product(_id: ID!): Product
+    # needs to be "seeded"
     products(category: ID, name: String): [Product]
+    # needs to be "seeded"
     order(_id: ID!): Order
+    # needs to be "seeded"
     checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
+    # works
     login(email: String!, password: String!): Auth
+    # works
     addUser(username: String!, name: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     addOrder(products: [ID]!): Order
-    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, category: CategoryInput ): Product
+    addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, Category: CategoryInput ): Product
     updateProduct(_id: ID!, quantity: Int!): Product
-    addCategory(name: String!): Category
   }
 `;
 
