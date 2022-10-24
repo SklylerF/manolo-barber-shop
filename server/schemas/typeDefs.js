@@ -79,6 +79,7 @@ const typeDefs = gql`
     addOrder(products: [ID]!): Order
     addProduct(name: String!, description: String, image: String, quantity: Int, price: Float, Category: CategoryInput ): Product
     updateProduct(_id: ID!, quantity: Int!): Product
+    addCategory(_id: ID!, name: String!): Category
   }
 `;
 
