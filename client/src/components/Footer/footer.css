@@ -45,6 +45,16 @@
   color: #ab0f14;
 }
 
+/* socials */
+
+.instagram, .yelp, .google, .facebook {
+  font-size: 20px;
+}
+
+.socials svg:hover {
+  color: #ab0f14;
+}
+
 .phone:hover, .email:hover, .find-us:hover, .review:hover, .book-appointment:hover, .about-us:hover, .services:hover {
   color: #ab0f14;
 }
