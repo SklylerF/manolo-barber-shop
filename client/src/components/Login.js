@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
-
+import Navbar from "./navbar/Navbar";
 import Auth from "../utils/auth";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
   const [formState, setFormState] = useState({ email: "", password: "" });
 
@@ -42,6 +43,11 @@ export default function () {
 
   return (
     <div className='Auth-form-container'>
+      <div>
+        <div>
+          <Navbar />
+        </div>
+      </div>
       <form className='Auth-form' onSubmit={handleFormSubmit}>
         <div className='Auth-form-content'>
           <h3 className='Auth-form-title'>Sign In</h3>
