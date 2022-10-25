@@ -1,5 +1,5 @@
 /* This is importing the mongoose package. */
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 /* This is connecting to the database. */
 mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost/ManoloBarbershop`, {
