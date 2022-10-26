@@ -4,8 +4,7 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Category, Order, Product } = require("../models");
 /* Importing the signToken function from the auth.js file. */
 const { signToken } = require("../utils/auth");
-const stripe = require('stripe')('sk_test_51LvW3REWiFhsoBBB3p2g8EczVo68lxoEJpM74GvF3bZphfwvDvbVIMlX9c337622l3WBUhVaCLZNXcDhxwzAnfrG00B8NDBqNq');
-
+const stripe = require("stripe")("sk_test_51LvW3REWiFhsoBBB3p2g8EczVo68lxoEJpM74GvF3bZphfwvDvbVIMlX9c337622l3WBUhVaCLZNXcDhxwzAnfrG00B8NDBqNq");
 
 /* This is the resolver for the queries and mutations. */
 const resolvers = {
@@ -36,14 +35,12 @@ const resolvers = {
     },
     /* This is a query that is used to find all users. */
     getUsers: async (perent, args, context) => {
-      return User.find({
-
-      })
+      return User.find({});
     },
     /* This is a query that is used to find a single user by their username. */
     singleUser: async (parent, args, context) => {
       return User.findOne({
-        username: args.username
+        username: args.username,
       });
     },
     /* This is a query that is used to find a single order by its id. */
@@ -113,6 +110,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+
       return { token, user };
     },
     /* This is the addUser mutation. It is used to create a new user. */
@@ -138,12 +136,12 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
     addProduct: async (parent, args) => {
-      const product = await Product.create(args)
-      return { product }
+      const product = await Product.create(args);
+      return { product };
     },
-    addCategory: async (parent,args) => {
-      const category = await Category.create(args)
-      return category
+    addCategory: async (parent, args) => {
+      const category = await Category.create(args);
+      return category;
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
@@ -157,11 +155,7 @@ const resolvers = {
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Product.findByIdAndUpdate(
-        _id,
-        { $inc: { quantity: decrement } },
-        { new: true }
-      );
+      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
     },
   },
 };
