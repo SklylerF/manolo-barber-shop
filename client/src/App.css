@@ -1,12 +1,10 @@
-
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 /* login in  */
 .App {
     background-color: black;
@@ -40,9 +38,11 @@
     padding-bottom: 20px;
     border-radius: 8px;
 }
+
 .text-center {
     color: whitesmoke;
 }
+
 .Auth-form-content {
     padding-left: 12%;
     padding-right: 12%;
@@ -62,6 +62,7 @@ label {
     color: whitesmoke;
 
 }
+
 /* 'Gallery' from carousel  */
 #gallery {
     text-align: center;
