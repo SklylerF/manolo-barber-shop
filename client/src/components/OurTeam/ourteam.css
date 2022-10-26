@@ -29,7 +29,8 @@ p {
 }
 
 .team {
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
+  min-width: 250px;
 }
 
 .book-with-btn-container {
@@ -66,26 +67,26 @@ p {
   box-shadow: 5px 10px 10px 5px grey;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1050px) {
   .team-flex-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1520px) {
   .team-flex-container { grid-template-columns: repeat(3, 1fr);
    /*  padding: 20px; */
   }
 
 }
 
-@media only screen and (max-width: 684px) {
+@media only screen and (max-width: 584px) {
   .book-with {
-    padding: 5px 20px 5px 20px;
+    padding: 0px 10px;
   }
 
   .team-flex-container {
-    padding: 0;
+    padding: 10px;
   }
 
   .our-team-container {
