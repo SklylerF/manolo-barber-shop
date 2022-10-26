@@ -23,7 +23,6 @@ export default function Navbar() {
   return (
     <div className='navbar-container'>
       <header className='header-container'>
-
         <Link to='/'>
           <img className='manolo-logo' src={ManoloLogo} alt='Manolo Logo' />
           <h2>MANOLO BARBERSHOP</h2>
