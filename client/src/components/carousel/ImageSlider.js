@@ -21,6 +21,7 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <div className='slider-container'>
+      <h2 className="gallery">GALLERY</h2>
       <div className='slider'>
         <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
         <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
