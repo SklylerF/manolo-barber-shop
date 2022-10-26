@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
+import Navbar from "./navbar/Navbar";
 
 import Auth from "../utils/auth";
 
@@ -41,6 +42,11 @@ export default function SignUp() {
 
   return (
     <div className='Auth-form-container'>
+      <div>
+        <div>
+          <Navbar />
+        </div>
+      </div>
       {data ? (
         <h2>
           You Are Logged In! <Link to='/'>CLICK ME TO GO BACK TO THE HOMEPAGE</Link>
