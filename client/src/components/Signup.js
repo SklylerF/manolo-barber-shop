@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Navbar from "./navbar/Navbar";
 
-import Auth from "../utils/auth";
+import Auth from "../utils/Auth";
 
 export default function SignUp() {
   const [formState, setFormState] = useState({
@@ -17,7 +17,6 @@ export default function SignUp() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name);
 
     setFormState({
       ...formState,
