@@ -2,6 +2,7 @@ import "./footer.css";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
+import { faInstagram, faYelp, faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 // fontawesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -47,12 +48,6 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a>EMAIL US</a>
-              <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-              {/* TODO: REMEMBER TO ENTER EMAIL HERE */}
-              <a className='email'>testemail@test.com</a>
-            </div>
-            <div>
               <a target='__blank' className='book-appointment' href='https://booksy.com/en-us/739943_manolo-barbershop_barber-shop_134628_riverside'>
                 BOOK AN APPOINTMENT
               </a>
@@ -71,6 +66,24 @@ export default function Footer() {
                 REVIEW US!
               </a>
               <FontAwesomeIcon icon={faStarHalfStroke}></FontAwesomeIcon>
+            </div>
+            <div className='socials'>
+              <a className='instagram' href='https://www.instagram.com/manolobarbershopriverside/?hl=en' target='__blank'>
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a className='yelp' href='https://www.yelp.com/biz/manolo-barbershop-riverside' target='__blank'>
+                <FontAwesomeIcon icon={faYelp} />
+              </a>
+              <a
+                className='google'
+                href='https://www.google.com/search?q=manolo+barbershop&rlz=1C1CHBF_enUS893US893&sxsrf=ALiCzsbldo1LEPi89JiCGmEysEcAyh7W3g%3A1666596799250&ei=vz9WY9T0Du_UkPIPqf66IA&ved=0ahUKEwiU0M_xrPj6AhVvKkQIHSm_DgQQ4dUDCBA&uact=5&oq=manolo+barbershop&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyCwguEIAEEMcBEK8BMgIIJjoNCAAQRxDWBBCwAxDJAzoKCAAQRxDWBBCwAzoGCAAQHhANOgYIABAWEB46CwgAEAgQHhDJAxANSgQIQRgASgQIRhgAULYFWMUJYI4OaAFwAXgAgAGaAYgB6ASSAQMwLjWYAQCgAQHIAQTAAQE&sclient=gws-wiz'
+                target='__blank'
+              >
+                <FontAwesomeIcon icon={faGoogle} />
+              </a>
+              <a className='facebook' href='https://www.facebook.com/manolobarbershopriverside/' target='__blank'>
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
             </div>
           </div>
           <div className='footer-right-right'>

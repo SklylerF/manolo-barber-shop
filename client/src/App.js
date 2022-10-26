@@ -2,62 +2,45 @@ import "./App.css";
 import LandingPage from "./components/LandingPage";
 import Shop from "../src/components/Shop";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Auth from "./components/Auth";
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { setContext } from "@apollo/client/link/context";
+import SignUp from "./components/Signup";
+import Login from "./components/Login";
+
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorzation: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-  const shopItems = [
-    {
-      name: "Item 1",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 2",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 3",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 4",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 5",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 6",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 7",
-      category: "Hair",
-      price: 100,
-    },
-    {
-      name: "Item 8",
-      category: "Hair",
-      price: 100,
-    },
-  ];
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Routes>
-          <Route path='/' element={<LandingPage />} />
-          <Route path='/auth' element={<Auth />} />
-          <Route path='/shop' element={<Shop shopItems={shopItems} />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className='App'>
+          <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/shop' element={<Shop />} />
+          </Routes>
+        </div>
+      </Router>
+    </ApolloProvider>
   );
 }
 
