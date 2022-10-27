@@ -1,8 +1,9 @@
 .item-shop {
   padding: 250px 100px 250px 100px;
+  position: relative;
   background-color: white;
   text-align: center;
-  height: 100vh;
+  height: auto;
   width: auto;
 }
 
@@ -33,14 +34,14 @@
   border-radius: .25rem;
   cursor: pointer;
   box-shadow: 0 0 5px 5px rgb(0, 0 ,0, .3);
-  transform: perspective(700px) rotateY(var(--rotate-y, 0)) translateZ(var(--translate-z, 0));
+  transform: perspective(700px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
   transition: .5s;
   transform-style: preserve-3d;
   
 }
 
 .cards:hover {
-  --translate-z: 20px;
+  --translate-y: 20px;
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, .7);
 }
 
