@@ -9,7 +9,11 @@
 // import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 // import "./Cart.css";
 
+<<<<<<< HEAD
 // const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx"); //TODO
+=======
+// const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+>>>>>>> dcf8746e00a3d2c8bbae0e7694c8378b56f12798
 
 // const Cart = () => {
 //   const [state, dispatch] = useStoreContext();
