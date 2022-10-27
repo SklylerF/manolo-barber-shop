@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { setContext } from "@apollo/client/link/context";
-import { StoreProvider } from './utils/GlobalState';
+import { StoreProvider } from "./utils/GlobalState";
 
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
@@ -34,13 +34,13 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className='App'>
-        <StoreProvider>
-          <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/shop' element={<Shop />} />
-          </Routes>
+          <StoreProvider>
+            <Routes>
+              <Route path='/' element={<LandingPage />} />
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/shop' element={<Shop />} />
+            </Routes>
           </StoreProvider>
         </div>
       </Router>
