@@ -7,20 +7,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .transparent-logo {
-  width: 950px;
+  width: 630px;
   height: 100%;
   display: block;
   background-color: black;
+  padding-top: 10px;
 }
 
 .book-button {
   background-color: #ab0f14;
   text-decoration: none;
-  padding: 20px;
+  padding: 12px;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -46,8 +47,6 @@
 
 @media only screen and (max-width: 1023px) {
   .transparent-logo {
-      width: auto;
-      height: 600px;
       object-fit:cover;
   }
 
