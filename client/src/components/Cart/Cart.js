@@ -11,6 +11,20 @@ import "./Cart.css";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx"); //TODO
 
+import React, { useEffect } from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+import { useLazyQuery } from '@apollo/client';
+import { QUERY_CHECKOUT } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+import CartItem from '../CartItem';
+import Auth from '../../utils/Auth';
+import { useStoreContext } from '../../utils/GlobalState';
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import './Cart.css';
+
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx'); //TODO
+
+
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
@@ -71,8 +85,8 @@ const Cart = () => {
   }
 
   return (
-    <div className='cart'>
-      <div className='close' onClick={toggleCart}>
+    <div className="cart">
+      <div className="close" onClick={toggleCart}>
         [close]
       </div>
       <h2>Shopping Cart</h2>
@@ -81,15 +95,20 @@ const Cart = () => {
           {state.cart.map((item) => (
             <CartItem key={item._id} item={item} />
           ))}
-
-          <div className='flex-row space-between'>
+          <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
 
-            {Auth.loggedIn() ? <button onClick={submitCheckout}>Checkout</button> : <span>(log in to check out)</span>}
+            {Auth.loggedIn() ? (
+              <button onClick={submitCheckout}>Checkout</button>
+            ) : (
+              <span>(log in to check out)</span>
+            )}
           </div>
         </div>
       ) : (
-        <h3>Shopping cart is empty!</h3>
+        <h3>
+          Shopping cart is empty!
+        </h3>
       )}
     </div>
   );
