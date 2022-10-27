@@ -6,8 +6,7 @@ import CardList from "./Cards/CardList";
 import ProductOne from "../assets/images/product-one.jpg";
 import ProductTwo from "../assets/images/product-two.jpg";
 import Cart from "../components/Cart/Cart";
-
-
+import Auth from "../utils/Auth";
 
 export default function Shop() {
   const shopItems = [
@@ -35,7 +34,8 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
-        <Cart/>
+        {}
+        <Cart />
         <h2>SHOP</h2>
         <CardList shopItems={shopItems} />
       </div>
