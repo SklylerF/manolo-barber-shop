@@ -1,7 +1,8 @@
 .first-slide-container {
   background-color: transparent;
   z-index: 100;
-  position: absolute;;
+  position: absolute;
+  ;
   top: 15%;
   height: auto;
   width: 100%;
@@ -11,7 +12,7 @@
 }
 
 .transparent-logo {
-  width: 630px;
+  width: 101vh;
   height: 100%;
   display: block;
   background-color: black;
@@ -47,7 +48,7 @@
 
 @media only screen and (max-width: 1023px) {
   .transparent-logo {
-      object-fit:cover;
+    object-fit: cover;
   }
 
   .book-button {
@@ -63,13 +64,15 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .transparent-logo {
-      width: 400px;
-      height: 100%;  
-    }
-    .book-button {
-      bottom: -40px;
-      font-size: 12px;
-    }
+  .transparent-logo {
+    width: 60vh;
+    height: 100%;
+  }
+
+  .book-button {
+    bottom: -40px;
+    font-size: 12px;
+    display: none;
+  }
 
 }
