@@ -1,4 +1,4 @@
-# Project-3-template
+# manolo-barber-shop
 
 
 ## Description
