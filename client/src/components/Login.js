@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Navbar from "./navbar/Navbar";
-import Auth from "../utils/Auth";
+import Auth from "../utils/auth";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
