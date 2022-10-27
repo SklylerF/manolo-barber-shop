@@ -34,7 +34,11 @@
   display: block;
 }
 
-.review, .book-appointment, .find-us, .services {
+.find-us {
+  display: block;
+}
+
+.review, .book-appointment, .services {
   transition: .3s;
   display: inline-block;
   text-decoration: none;
