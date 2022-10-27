@@ -8,6 +8,8 @@ import ProductOne from "../assets/images/product-one.jpg";
 import ProductTwo from "../assets/images/product-two.jpg";
 import Auth from "../utils/Auth";
 
+import Cart from "../components/Cart/Cart";
+
 export default function Shop() {
   const shopItems = [
     {
@@ -46,6 +48,8 @@ export default function Shop() {
             </h2>
           </div>
         )}
+        <Cart />
+        <h2>SHOP</h2>
       </div>
       <div>
         <Footer />
