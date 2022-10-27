@@ -34,7 +34,6 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
-        {}
         <Cart />
         <h2>SHOP</h2>
         <CardList shopItems={shopItems} />
