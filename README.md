@@ -1,4 +1,4 @@
-# manolo-barber-shop
+# manolo-barbershop
 
 
 ## Description
