@@ -34,14 +34,14 @@
   border-radius: .25rem;
   cursor: pointer;
   box-shadow: 0 0 5px 5px rgb(0, 0 ,0, .3);
-  transform: perspective(700px) rotateY(var(--rotate-y, 0)) translateZ(var(--translate-z, 0));
+  transform: perspective(700px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
   transition: .5s;
   transform-style: preserve-3d;
   
 }
 
 .cards:hover {
-  --translate-z: 20px;
+  --translate-y: 20px;
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, .7);
 }
 
@@ -91,6 +91,15 @@
 }
 .cards button:hover {
   box-shadow: 0 0 5px  rgb(0, 0, 0, .7);
+}
+
+.not-log {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 1820px) {

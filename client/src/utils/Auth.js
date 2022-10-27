@@ -34,7 +34,7 @@ class AuthService {
 
   logout() {
     localStorage.removeItem("id_token");
-    alert("You have succesfully logged out");
+    alert("You have succesfully logged out. You will be redirected back to the homepage");
     window.location.replace("/");
   }
 }

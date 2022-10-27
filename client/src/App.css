@@ -8,6 +8,7 @@
         padding: 0;
 }
 /* login in  */
+
 .App {
     background-color: black;
 }
@@ -20,7 +21,7 @@
     background-color: #be3144;
     color: #d3d6db;
     border-color: #be3144
-}
+}s
 
 #btn:hover {
     background-color: #a12838;
@@ -72,11 +73,11 @@ label {
 
 .first {
     height: 100vh;
-    width: 100vw;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
 
 @media only screen and (max-width: 1024px) {
     .first {

@@ -1,22 +1,29 @@
 /* Carousel */
 .slider-container {
-    height: 75vh;
+    height: auto;
     width: 100%;
-    background-color: #3a4750;
+    background-color: #303841;
+    padding: 100px 0px;
 }
 
 .slider {
     position: relative;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    height: 100%;
+    width: auto;
   }
 
+.image-container {
+    width: 40vw;  
+}
+
 #image {
-    height: 65vh;
-    justify-content:center;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
 }
 
 .right-arrow {
@@ -50,4 +57,10 @@
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
+}
+
+@media only screen and (max-width: 600px) {
+    .image-container {
+        width: 80vw;
+    }
 }

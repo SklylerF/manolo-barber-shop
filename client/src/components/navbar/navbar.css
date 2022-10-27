@@ -148,10 +148,11 @@ header .nav-btn {
 }
 
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 460px) {
   .header-container {
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    padding-bottom: 0;
   }
 
 }

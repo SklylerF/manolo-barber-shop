@@ -2,9 +2,12 @@ import { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./Footer/Footer";
 import CardList from "./Cards/CardList";
+import { Link } from "react-router-dom";
 //importing product images
 import ProductOne from "../assets/images/product-one.jpg";
 import ProductTwo from "../assets/images/product-two.jpg";
+import Auth from "../utils/Auth";
+
 import Cart from "../components/Cart/Cart";
 import CategoryMenu from "./CategoryMenu/CategoryMenu";
 import ProductList from "./ProductList/ProductList";
