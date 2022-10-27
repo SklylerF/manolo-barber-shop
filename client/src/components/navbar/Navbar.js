@@ -11,7 +11,7 @@ const bookAppointmentLink = "https://booksy.com/en-us/739943_manolo-barbershop_b
 //only styles fot the header
 
 export default function Navbar() {
-  const logout = (event) => {
+  const logout = () => {
     Auth.logout();
   };
   //used to toggle on and off of the navigation bar depending on the size of the screen
