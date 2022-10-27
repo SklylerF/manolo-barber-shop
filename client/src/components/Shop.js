@@ -48,8 +48,7 @@ export default function Shop() {
             </h2>
           </div>
         )}
-        <Cart />
-        <h2>SHOP</h2>
+        {/* <Cart /> */}
       </div>
       <div>
         <Footer />
