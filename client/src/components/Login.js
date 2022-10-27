@@ -51,7 +51,7 @@ export default function () {
         </div>
         {data ? (
           <h2>
-            You are already logged in. <Link>VIEW CART</Link>
+            You are already logged in. <Link to='/shop'>VIEW SHOP</Link>
           </h2>
         ) : (
           <form className='Auth-form' onSubmit={handleFormSubmit}>

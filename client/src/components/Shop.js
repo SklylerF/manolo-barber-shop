@@ -2,12 +2,13 @@ import { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import Footer from "./Footer/Footer";
 import CardList from "./Cards/CardList";
+import { Link } from "react-router-dom";
 //importing product images
 import ProductOne from "../assets/images/product-one.jpg";
 import ProductTwo from "../assets/images/product-two.jpg";
+import Auth from "../utils/Auth";
+
 import Cart from "../components/Cart/Cart";
-
-
 
 export default function Shop() {
   const shopItems = [
@@ -35,9 +36,19 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
-        <Cart/>
-        <h2>SHOP</h2>
-        <CardList shopItems={shopItems} />
+        {Auth.loggedIn() ? (
+          <div>
+            <h2>SHOP</h2>
+            <CardList shopItems={shopItems} />
+          </div>
+        ) : (
+          <div>
+            <h2 className='not-log'>
+              You must be logged in to view the shop! <Link to='/login'>Login</Link>
+            </h2>
+          </div>
+        )}
+        {/* <Cart /> */}
       </div>
       <div>
         <Footer />
