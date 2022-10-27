@@ -1,13 +1,13 @@
 .first-slide-container {
   background-color: transparent;
   z-index: 100;
-  position: absolute;;
+  position: absolute;
   top: 15%;
   height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .transparent-logo {
@@ -72,4 +72,13 @@
       font-size: 12px;
     }
 
+    .first-slide-container {
+      top: 30%;
+    }
+}
+@media only screen and (max-width:404px) {
+  .transparent-logo {
+    height: 100%;
+    width: 100%;
+  }
 }
