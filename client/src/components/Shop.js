@@ -36,9 +36,9 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
+      <Cart />
       <CategoryMenu />
       <ProductList />
-      <Cart />
       </div>
       <div>
         <Footer />
