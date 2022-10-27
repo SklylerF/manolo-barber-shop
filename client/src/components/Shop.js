@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 //importing product images
 import ProductOne from "../assets/images/product-one.jpg";
 import ProductTwo from "../assets/images/product-two.jpg";
-import Cart from "../components/Cart/Cart";
 import Auth from "../utils/Auth";
+
+import Cart from "../components/Cart/Cart";
 
 export default function Shop() {
   const shopItems = [
@@ -37,18 +38,17 @@ export default function Shop() {
       <div className='item-shop'>
         {Auth.loggedIn() ? (
           <div>
-            {" "}
-            <Cart />
             <h2>SHOP</h2>
             <CardList shopItems={shopItems} />
           </div>
         ) : (
           <div>
-            <h2>
-              You Must Loggin before accesing the shop! <Link to='/login'>Login</Link>
+            <h2 className='not-log'>
+              You must be logged in to view the shop! <Link to='/login'>Login</Link>
             </h2>
           </div>
         )}
+        {/* <Cart /> */}
       </div>
       <div>
         <Footer />

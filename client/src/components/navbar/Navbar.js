@@ -11,7 +11,7 @@ const bookAppointmentLink = "https://booksy.com/en-us/739943_manolo-barbershop_b
 //only styles fot the header
 
 export default function Navbar() {
-  const logout = () => {
+  const logout = (event) => {
     Auth.logout();
   };
   //used to toggle on and off of the navigation bar depending on the size of the screen
@@ -40,7 +40,9 @@ export default function Navbar() {
                 <Link to='/cart'>
                   <a onClick={logout}>LOGOUT</a>
                 </Link>
-                <a className='profile'>{Auth.getProfile().data.username.toUpperCase()}</a>
+                <Link to='/shop' className='profile'>
+                  {Auth.getProfile().data.username.toUpperCase()}
+                </Link>
               </>
             ) : (
               <>
