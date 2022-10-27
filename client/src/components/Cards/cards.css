@@ -1,8 +1,9 @@
 .item-shop {
   padding: 250px 100px 250px 100px;
+  position: relative;
   background-color: white;
   text-align: center;
-  height: 100vh;
+  height: auto;
   width: auto;
 }
 
