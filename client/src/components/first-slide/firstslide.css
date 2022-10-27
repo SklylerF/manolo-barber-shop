@@ -1,6 +1,5 @@
 .first-slide-container {
   background-color: transparent;
-  z-index: 100;
   position: absolute;
   top: 15%;
   height: auto;
@@ -11,11 +10,19 @@
 }
 
 .transparent-logo {
-  width: 101vh;
+  width: 100%;
   height: 100%;
+  max-width: 1080px;
   display: block;
   background-color: black;
   padding-top: 10px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .book-button {
@@ -29,6 +36,7 @@
   border-radius: 5px;
   position: absolute;
   bottom: 30px;
+  z-index: 1000;
 }
 
 .book-button:hover {
@@ -37,12 +45,6 @@
   cursor: pointer;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-}
 
 
 @media only screen and (max-width: 1023px) {
@@ -64,14 +66,13 @@
 
 @media only screen and (max-width: 640px) {
   .transparent-logo {
-    width: 60vh;
+    width: 100%;
     height: 100%;
   }
 
   .book-button {
     bottom: -40px;
     font-size: 12px;
-    display: none;
   }
 
     .first-slide-container {

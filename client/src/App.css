@@ -21,7 +21,7 @@
     background-color: #be3144;
     color: #d3d6db;
     border-color: #be3144
-}
+}s
 
 #btn:hover {
     background-color: #a12838;
@@ -78,8 +78,6 @@ label {
     justify-content: center;
     align-items: center;
 }
-
-
 
 @media only screen and (max-width: 1024px) {
     .first {
