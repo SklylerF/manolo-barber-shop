@@ -7,11 +7,6 @@ import Footer from "./Footer/Footer";
 import "../App.css";
 import { SliderData } from "./carousel/SliderData.js";
 
-const styles = {
-  zIndex: 10000,
-  backgroundColor: "black",
-};
-
 export default function LandingPage() {
   return (
     <div>
