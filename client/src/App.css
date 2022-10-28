@@ -33,7 +33,7 @@
 }
 
 .Auth-form {
-    width: 420px;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 8px;
@@ -42,8 +42,8 @@
     color: black;
 }
 .Auth-form-content {
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .Auth-form-title {
