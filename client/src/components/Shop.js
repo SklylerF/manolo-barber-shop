@@ -9,6 +9,9 @@ import ProductTwo from "../assets/images/product-two.jpg";
 import Auth from "../utils/Auth";
 
 import Cart from "../components/Cart/Cart";
+import CategoryMenu from "./CategoryMenu/CategoryMenu";
+import ProductList from "./ProductList/ProductList";
+
 
 export default function Shop() {
   const shopItems = [
@@ -36,19 +39,9 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
-        {Auth.loggedIn() ? (
-          <div>
-            <h2>SHOP</h2>
-            <CardList shopItems={shopItems} />
-          </div>
-        ) : (
-          <div>
-            <h2 className='not-log'>
-              You must be logged in to view the shop! <Link to='/login'>Login</Link>
-            </h2>
-          </div>
-        )}
-        {/* <Cart /> */}
+      <Cart />
+      <CategoryMenu />
+      <ProductList />
       </div>
       <div>
         <Footer />
