@@ -8,6 +8,7 @@ import Auth from '../../utils/Auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './Cart.css';
+import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe('pk_test_51LvW3REWiFhsoBBB1YliSxUPPKPP204aEUtrNKG1TsDOuPaaKTIp02xgVOCHmgtYQirgLnSuzbQcnXIB8VxZagpc00njRGUm23');
 
@@ -77,29 +78,32 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
       </div>
-      <h2>Shopping Cart</h2>
+      <h2>My Cart</h2>
       {state.cart.length ? (
-        <div>
-          {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
-          ))}
-
-          <div className="flex-row space-between">
+        <div className='Item'>
+          <div className='cartitem'>
+            {state.cart.map((item) => (
+              <CartItem key={item._id} item={item} />
+            ))}
+          </div>
+          <div className="Total">
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(log in to check out)</span>
+              <div className='login'>
+                <Link to='/login'>
+                  <a className='logText'>Log in to check out!</a></Link>
+              </div>
             )}
           </div>
         </div>
       ) : (
         <h3>
-         Your cart is empty!
-            
+          Your cart is empty!
+
         </h3>
       )}
     </div>

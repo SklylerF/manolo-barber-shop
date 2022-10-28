@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Navbar from "./navbar/Navbar";
-
 import Auth from "../utils/Auth";
 
 export default function SignUp() {
