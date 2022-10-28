@@ -38,6 +38,7 @@ db.once("open", async () => {
   await User.create({
     firstName: "Pamela",
     lastName: "Washington",
+    username: "cruz1",
     email: "pamela@testmail.com",
     password: "password12345",
     orders: [
@@ -50,6 +51,7 @@ db.once("open", async () => {
   await User.create({
     firstName: "Elijah",
     lastName: "Holt",
+    username: "cruz",
     email: "eholt@testmail.com",
     password: "password12345",
   });

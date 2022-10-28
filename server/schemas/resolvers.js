@@ -15,7 +15,10 @@ const resolvers = {
     },
     /* This is a query that is used to find all products. */
     products: async (parent, { category, name }) => {
-      const params = {};
+      const params = {
+        category,
+        name,
+      };
 
       if (category) {
         params.category = category;

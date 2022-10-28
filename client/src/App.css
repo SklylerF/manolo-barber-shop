@@ -37,6 +37,9 @@
     padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text-center {
     color: black;
