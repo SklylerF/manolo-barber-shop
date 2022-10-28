@@ -6,7 +6,7 @@ import { faInstagram, faYelp, faGoogle, faFacebook } from "@fortawesome/free-bra
 
 // fontawesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faLocationPin, faEnvelope, faCalendarCheck, faBellConcierge, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faLocationPin, faCalendarCheck, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   const { isLoaded } = useLoadScript({ googleMapsApiKey: "AIzaSyAx6JeOTxyWkbx-2KGZqflXLvu7V01VVWA" });
@@ -52,10 +52,6 @@ export default function Footer() {
                 BOOK AN APPOINTMENT
               </a>
               <FontAwesomeIcon icon={faCalendarCheck}></FontAwesomeIcon>
-            </div>
-            <div>
-              <a className='services'>SERVICES</a>
-              <FontAwesomeIcon icon={faBellConcierge}></FontAwesomeIcon>
             </div>
             <div>
               <a

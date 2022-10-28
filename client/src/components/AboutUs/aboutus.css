@@ -1,9 +1,9 @@
 .about-us-container {
-  height: auto;;
+  height: auto;
   height: 40vh;
   text-align: center;
-  background-color: #303841 ;
-  color: #d3d6db;
+  background-color: #d3d6db ;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,9 @@
   font-size: 1.2rem;
   }
 
-
+.text-container p{
+  margin: 0;
+}
 
 @media only screen and (max-width: 768px) {
   .about-us-container{
