@@ -16,7 +16,8 @@
         "jsonwebtoken": "^8.5.1",
         "apollo-server-express": "^3.6.2",
         "graphql": "^16.3.0",
-        "mongoose": "^5.9.10"
+        "mongoose": "^5.9.10",
+        "stripe": "^8.67.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.3"

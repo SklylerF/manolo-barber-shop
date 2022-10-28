@@ -9,11 +9,12 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './Cart.css';
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51LvW3REWiFhsoBBB1YliSxUPPKPP204aEUtrNKG1TsDOuPaaKTIp02xgVOCHmgtYQirgLnSuzbQcnXIB8VxZagpc00njRGUm23');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
 
   useEffect(() => {
     if (data) {
@@ -33,7 +34,7 @@ const Cart = () => {
       getCart();
     }
   }, [state.cart.length, dispatch]);
-
+  
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
   }
@@ -47,6 +48,7 @@ const Cart = () => {
   }
 
   function submitCheckout() {
+    
     const productIds = [];
 
     state.cart.forEach((item) => {
@@ -56,10 +58,12 @@ const Cart = () => {
     });
 
     getCheckout({
+      
       variables: { products: productIds },
-    });
+    } );
+    
   }
-
+  
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>

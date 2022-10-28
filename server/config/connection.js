@@ -5,8 +5,6 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/Manolo-Barbershop`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
 });
 
 /* Exporting the connection to the database. */
