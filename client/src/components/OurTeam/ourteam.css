@@ -1,95 +1,68 @@
-.our-team-container {
-  background-color: #d3d6db;
-  padding: 75px 20px 75px 20px;
-  text-align: center;
-  height: auto;
-  width: auto;
+.about-owner-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  padding: 50px 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
 }
 
-.our-team-container h2 {
+.image-about-owner-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-about-owner-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  max-width: 520px;
+  min-width: 230px;
+}
+
+.owner-about h2{
+  text-align: end;
   font-size: 2.5rem;
   font-weight: bolder;
-  margin-bottom: 3rem;
 }
 
-.team-flex-container {
-  padding: 20px 100px 20px 100px;
-  /* display: flex; */
-  display: grid;
-  align-items: center;
-  gap: 1rem;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  margin: 0 auto;
+.owner-about p {
+  font-size: larger;
+  margin-top: 100px;
 }
 
-p {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bolder;
-}
+@media only screen and (max-width: 1300px) {
+  .about-owner-container {
+    grid-template-columns: 1fr;
+  }
 
-.team {
-  margin: 20px;
-  min-width: 250px;
-}
+  .owner-about p {
+    margin: 0;
+  }
 
-.book-with-btn-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .owner-about h2{
+    text-align: center;
+  }
 
-.book-with {
-  text-decoration: none;
-  padding: 10px 40px 10px 40px;
-  background-color: white;
-  color: black;
-  font-weight: bolder;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 20px;
-  transition: .3s;
-}
-
-.book-with:hover {
-  background-color: #ab0f14;
-  color: black;
-  cursor: pointer;
-}
-
-.team-flex-container img {
-  height: auto;
-  max-width: 500px;
-  width: 100%;
-  border-radius: 10px;
-  object-fit: contain;
-  box-shadow: 5px 10px 10px 5px grey;
-}
-
-@media only screen and (min-width: 1050px) {
-  .team-flex-container {
-    grid-template-columns: repeat(2, 1fr);
+  .owner-about p {
+    padding: 50px;
+    font-size: 1.1rem;
+    text-align: center;
   }
 }
 
-@media only screen and (min-width: 1520px) {
-  .team-flex-container { grid-template-columns: repeat(3, 1fr);
-   /*  padding: 20px; */
+@media only screen and (max-width: 500px) {
+  .about-owner-container {
+    padding: 50px;
   }
 
-}
-
-@media only screen and (max-width: 584px) {
-  .book-with {
-    padding: 0px 10px;
-  }
-
-  .team-flex-container {
-    padding: 10px;
-  }
-
-  .our-team-container {
-    padding: 40px 0 40px 0px;
+  .owner-about p {
+    padding: 10px 0px;
   }
 }

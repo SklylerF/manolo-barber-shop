@@ -1,4 +1,5 @@
 
+
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,10 +9,6 @@
         padding: 0;
 }
 /* login in  */
-
-.App {
-    background-color: black;
-}
 
 #sign-up {
     cursor: pointer
@@ -73,20 +70,12 @@ label {
 
 .first {
     height: 100vh;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url("../src/assets/images/firstslide-background.jpg");
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgb(36, 35, 35);
 }
 
-@media only screen and (max-width: 1024px) {
-    .first {
-        height: 75vh
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .first {
-        height: 60vh;
-    }
+.page {
+    background-color: #303841;
 }

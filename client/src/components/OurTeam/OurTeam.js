@@ -1,31 +1,21 @@
 import "./ourteam.css";
+import OwnerImg from "../../assets/images/owner-profile.jpg";
 
-export default function OurTeam({ team }) {
+export default function Owner() {
   return (
     <div>
-      <div className='our-team-container'>
-        <h2>OUR TEAM</h2>
-        <div className='team-flex-container'>
-          {team.map((teamate) => {
-            return (
-              <div className='team'>
-                <p>
-                  {teamate.name} ({teamate.role})
-                </p>
-                <img src={teamate.image} alt={`Image of ${teamate.name} a${teamate.role}`}></img>
-                {teamate.role === "Barber" ? (
-                  <div className='book-with-btn-container'>
-                    <a className='book-with' href={teamate.bookUrl}>
-                      BOOK
-                    </a>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
-              </div>
-            );
-          })}
+      <div className='about-owner-container'>
+        <div className='image-about-owner-container'>
+          <img src={OwnerImg}></img>
         </div>
+        <section className='owner-about'>
+          <h2>FROM OWNER</h2>
+          <p className='owner-about-content'>
+            For as long as I can remember, the goal of establishing business has been a dream. For now, my third business under my belt, I feel more
+            confident than ever in what I do. I have a passion for leadership and with it, create a new wave of successful entrepenuers to continue
+            bringing value to the marketplace.
+          </p>
+        </section>
       </div>
     </div>
   );
