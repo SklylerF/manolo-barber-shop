@@ -17,7 +17,7 @@ db.once('open', async () => {
       name: 'Kalive Urban Pomade for Men',
       description:
         'Kalive Pomade will give your hair all the control and flexibility needed to easily create your desired look all while nourishing your hair with natural ingredients. Our premium water-based pomade can be washed out easily, won’t damage your hair and won’t clog your pores.',
-      image: 'pproduct-one.68ddf189d137c495abda.jpg',
+      image: 'product-one.68ddf189d137c495abda.jpg',
       category: categories[0]._id,
       price: 13.99,
       quantity: 10000
