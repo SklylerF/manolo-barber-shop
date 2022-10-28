@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./cards.css";
-export default function Cards({ item }) {
+export default function Cards(item) {
   const [flip, setFlip] = useState(false);
 
   return (

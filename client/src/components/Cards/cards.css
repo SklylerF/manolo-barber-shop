@@ -7,7 +7,7 @@
   width: auto;
 }
 
-.card-grid {
+.flex-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
@@ -16,6 +16,7 @@
   padding: 0px 300px;
   justify-items: center;
   align-items: center;
+  gap: 100px;
 }
 
 .cards {
@@ -41,7 +42,7 @@
 }
 
 .cards:hover {
-  --translate-y: 20px;
+  --translate-y: -20px;
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, .7);
 }
 
@@ -63,7 +64,9 @@
 
 
 .card-back {
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
+  gap: 20px;
+  justify-content: center; 
 }
 
 .cards h2 {
@@ -103,25 +106,25 @@
 }
 
 @media only screen and (max-width: 1820px) {
-  .card-grid {
+  .flex-row{
     padding: 0 200px;
   }
 }
 
 @media only screen and (max-width: 1520px) {
-  .card-grid {
+  .flex-row {
     padding: 0 100px;
   }
 }
 
 @media only screen and (max-width: 1320px) {
-  .card-grid {
+  .flex-row {
     padding: 0;
   }
 }
 
 @media only screen and (max-width: 1080px) {
-  .card-grid {
+  .flex-row {
     grid-template-columns: 1fr;
     gap: 100px
   }

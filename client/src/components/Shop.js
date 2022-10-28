@@ -9,9 +9,7 @@ import ProductTwo from "../assets/images/product-two.jpg";
 import Auth from "../utils/Auth";
 
 import Cart from "../components/Cart/Cart";
-import CategoryMenu from "./CategoryMenu/CategoryMenu";
 import ProductList from "./ProductList/ProductList";
-
 
 export default function Shop() {
   const shopItems = [
@@ -39,9 +37,8 @@ export default function Shop() {
         <Navbar />
       </div>
       <div className='item-shop'>
-      <Cart />
-      <CategoryMenu />
-      <ProductList />
+        <Cart />
+        <ProductList item={shopItems} />
       </div>
       <div>
         <Footer />
