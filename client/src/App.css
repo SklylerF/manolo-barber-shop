@@ -39,7 +39,7 @@
     border-radius: 8px;
 }
 .text-center {
-    color: whitesmoke;
+    color: black;
 }
 .Auth-form-content {
     padding-left: 12%;
@@ -50,14 +50,14 @@
     text-align: center;
     margin-bottom: 1em;
     font-size: 24px;
-    color: whitesmoke;
+    color: black;
     font-weight: 800;
 }
 
 label {
     font-size: 14px;
     font-weight: 600;
-    color: whitesmoke;
+    color: black;
 
 }
 /* 'Gallery' from carousel  */

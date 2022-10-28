@@ -2,13 +2,12 @@
   z-index: 1;
   position: absolute;
   right: 0;
-  min-width: 20%;
+  min-width: 100%;
   max-width: 30%;
-  max-height: 60%;
+  max-height: 100%;
   background-color: white;
   overflow: auto;
-  padding: .5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+  padding: 2.5rem;
   border-bottom-left-radius: .5rem;
 }
 
@@ -19,14 +18,38 @@
   margin: 1rem 0;
 }
 
-.cart .close {
+.cart {
   position: absolute;
   right: .5rem;
   cursor: pointer;
   color: var(--tertiary);
 }
-
-.cart .close:hover {
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.Item:hover {
   text-decoration: underline;
 }
 
