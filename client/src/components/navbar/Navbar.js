@@ -20,7 +20,6 @@ export default function Navbar() {
   const showNav = () => {
     navRef.current.classList.toggle("responsive-nav");
   };
-
   return (
     <div className='navbar-container'>
       <header className='header-container'>
