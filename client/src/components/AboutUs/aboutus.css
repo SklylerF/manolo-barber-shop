@@ -1,6 +1,5 @@
 .about-us-container {
   height: auto;
-  height: 40vh;
   text-align: center;
   background-color: #d3d6db ;
   color: black;
@@ -19,6 +18,10 @@
   font-size: 1.2rem;
   }
 
+.text-container {
+  padding: 200px;
+}
+
 .text-container p{
   margin: 0;
 }
@@ -27,4 +30,10 @@
   .about-us-container{
     padding: 100px 30px 100px 30px
   }
+
+  .text-container {
+    padding: 20px;
+  }
 }
+
+

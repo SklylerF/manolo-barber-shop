@@ -9,7 +9,7 @@ export default function Owner() {
           <img src={OwnerImg}></img>
         </div>
         <section className='owner-about'>
-          <h2>FROM OWNER</h2>
+          <h2>CEO: Edgar Alexis Perez BusTamante</h2>
           <p className='owner-about-content'>
             For as long as I can remember, the goal of establishing business has been a dream. For now, my third business under my belt, I feel more
             confident than ever in what I do. I have a passion for leadership and with it, create a new wave of successful entrepenuers to continue

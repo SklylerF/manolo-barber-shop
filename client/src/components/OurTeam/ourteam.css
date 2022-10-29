@@ -34,7 +34,15 @@
 
 .owner-about p {
   font-size: larger;
-  margin-top: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.owner-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -57,7 +65,8 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 850px) {
   .about-owner-container {
     padding: 50px;
   }
