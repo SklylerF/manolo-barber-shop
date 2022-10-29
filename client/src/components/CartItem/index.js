@@ -34,8 +34,8 @@ const CartItem = ({ item }) => {
 
   return (
     <div>
-      <div>
-        <img src={`/images/${item.image}`} alt='' />
+      <div className="cartImg">
+        <img src={`static/media/${item.image}`} alt='' />
       </div>
       <div>
         <div>
