@@ -4,8 +4,7 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Category, Order, Product } = require("../models");
 /* Importing the signToken function from the auth.js file. */
 const { signToken } = require("../utils/auth");
-const stripe = require("stripe")("sk_test_51LvW3REWiFhsoBBB3p2g8EczVo68lxoEJpM74GvF3bZphfwvDvbVIMlX9c337622l3WBUhVaCLZNXcDhxwzAnfrG00B8NDBqNq");
-
+const stripe = require('stripe')('sk_test_51LvW3REWiFhsoBBB3p2g8EczVo68lxoEJpM74GvF3bZphfwvDvbVIMlX9c337622l3WBUhVaCLZNXcDhxwzAnfrG00B8NDBqNq');
 /* This is the resolver for the queries and mutations. */
 const resolvers = {
   Query: {
@@ -33,15 +32,23 @@ const resolvers = {
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category'
+        });
+
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
     /* This is a query that is used to find all users. */
     getUsers: async (perent, args, context) => {
       return User.find({});
-    },
-    /* This is a query that is used to find a single user by their username. */
-    singleUser: async (parent, args, context) => {
-      return User.findOne({
-        username: args.username,
-      });
     },
     /* This is a query that is used to find a single order by its id. */
     order: async (parent, { _id }, context) => {
@@ -62,37 +69,37 @@ const resolvers = {
       const order = new Order({ products: args.products });
       const line_items = [];
 
-      const { products } = await order.populate("products");
+      const { products } = await order.populate('products');
 
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${url}/images/${products[i].image}`],
+          images: [`${url}/images/${products[i].image}`]
         });
 
         const price = await stripe.prices.create({
           product: product.id,
           unit_amount: products[i].price * 100,
-          currency: "usd",
+          currency: 'usd',
         });
 
         line_items.push({
           price: price.id,
-          quantity: 1,
+          quantity: 1
         });
       }
 
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
+        payment_method_types: ['card'],
         line_items,
-        mode: "payment",
+        mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`,
+        cancel_url: `${url}/`
       });
 
       return { session: session.id };
-    },
+    }
   },
 
   Mutation: {
@@ -121,19 +128,17 @@ const resolvers = {
       return { token, user };
     },
     /* This is the addOrder mutation. It is used to create a new order. */
-    addOrder: async (parent, { products }, context) => {
+     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
         const order = new Order({ products });
 
-        await User.findByIdAndUpdate(context.user._id, {
-          $push: { orders: order },
-        });
+        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
 
         return order;
       }
 
-      throw new AuthenticationError("Not logged in");
+      throw new AuthenticationError('Not logged in');
     },
     addProduct: async (parent, args) => {
       const product = await Product.create(args);
