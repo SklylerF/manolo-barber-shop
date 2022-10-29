@@ -16,12 +16,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "@stripe/stripe-js": "^1.42.0",
-    "apollo-server-express": "^2.15.0",
-    "dotenv": "^16.0.3",
-    "graphql": "^15.8.0",
-    "stripe": "^10.15.0"
   }
 }

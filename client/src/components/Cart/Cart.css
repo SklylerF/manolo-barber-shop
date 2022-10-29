@@ -2,39 +2,97 @@
   z-index: 1;
   position: absolute;
   right: 0;
-  min-width: 20%;
+  min-width: 100%;
   max-width: 30%;
-  max-height: 60%;
+  max-height: 100%;
   background-color: white;
   overflow: auto;
-  padding: .5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
-  border-bottom-left-radius: .5rem;
+  border-color: black;
+  padding: 2.5rem;
+}
+
+.Total strong {
+  font-size: 2rem;
+}
+
+button,
+.login {
+  background-color: #be3144;
+  color: #d3d6db;
+  border-color: #be3144;
+  border-radius: 8px;
+}
+
+.logText {
+  color: whitesmoke;
+}
+
+.login {
+  color: #be3144;
+  padding: 10px;
+  align-items: center;
+  width: 16vw;
+  margin: 0 auto;
 }
 
 .cart h2 {
-  font-size: 1.5rem;
-  border-bottom: 1px solid var(--dark);
+  font-weight: bolder;
+  font-size: 2rem;
   padding-bottom: .5rem;
   margin: 1rem 0;
 }
 
-.cart .close {
+.cart {
   position: absolute;
-  right: .5rem;
-  cursor: pointer;
-  color: var(--tertiary);
+  border: 2px solid;
+  border-radius: 9px;
 }
 
-.cart .close:hover {
-  text-decoration: underline;
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
 }
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.cartitem {
+  align-items: center;
+  margin: 0 auto;
+}
+
+.cartitem:hover {
+  cursor: pointer;
+}
+
 
 .cart-closed {
   position: absolute;
   right: 1%;
   font-size: 2rem;
-  cursor: pointer;
   background-color: var(--secondary);
   border-radius: 50%;
   padding: .25rem;
@@ -44,11 +102,6 @@
 
 .cart-closed:hover {
   transform: rotate(8deg);
-}
-
-.cart img {
-  width: 70px;
-  margin-right: 1rem;
 }
 
 .cart input {
@@ -63,6 +116,10 @@
     max-height: auto;
     box-shadow: none;
     background-color: inherit;
+  }
+
+  .login {
+    width: 70vw;
   }
 
   .cart-closed {

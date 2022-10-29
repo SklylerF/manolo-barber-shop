@@ -57,7 +57,7 @@ const typeDefs = gql`
     # works
     getUsers: [User]
     # works
-    singleUser(username: String!): User
+    user: User
     # needs to be "seeded"
     categories: [Category]
     # needs to be "seeded"

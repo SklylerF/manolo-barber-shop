@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Navbar from "./navbar/Navbar";
-
 import Auth from "../utils/Auth";
 
 export default function SignUp() {
@@ -57,7 +56,7 @@ export default function SignUp() {
             <div className='text-center'>
               Already registered?{" "}
               <Link to='/login'>
-                <span className='link-primary'>Sign In</span>
+                <span className='link-primary'>Sign In </span>
               </Link>
             </div>
             <div className='form-group mt-3'>

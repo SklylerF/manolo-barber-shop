@@ -36,7 +36,7 @@ export default function Shop() {
       </div>
       <div className='item-shop'>
         <Cart />
-        <ProductList item={shopItems} />
+        <ProductList />
       </div>
       <div>
         <Footer />
